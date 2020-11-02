@@ -1,0 +1,2656 @@
+iex(1)> RingLogger.attach
+:ok
+iex(2)> RingLogger.next
+
+00:00:04.141 [info]  Booting Linux on physical CPU 0x0
+
+00:00:04.142 [info]  Linux version 4.19.118 (nerves@8eb064424d90) (gcc version 9.2.0 (crosstool-NG 1.24.0.71-4fa0ba1)) #2 SMP PREEMPT Fri Oct 30 15:17:56 UTC 2020
+
+00:00:04.142 [info]  CPU: ARMv7 Processor [410fd083] revision 3 (ARMv7), cr=30c5383d
+
+00:00:04.142 [info]  CPU: div instructions available: patching division code
+
+00:00:04.142 [info]  CPU: PIPT / VIPT nonaliasing data cache, PIPT instruction cache
+
+00:00:04.142 [info]  OF: fdt: Machine model: Raspberry Pi 4 Model B Rev 1.4
+
+00:00:04.142 [info]  Memory policy: Data cache writealloc
+
+00:00:04.142 [error] OF: fdt: Reserved memory: unsupported node format, ignoring
+
+00:00:04.142 [info]  cma: Reserved 64 MiB at 0x0000000030000000
+
+00:00:04.142 [debug] On node 0 totalpages: 2031616
+
+00:00:04.142 [debug]   DMA zone: 1728 pages used for memmap
+
+00:00:04.142 [debug]   DMA zone: 0 pages reserved
+
+00:00:04.142 [debug]   DMA zone: 196608 pages, LIFO batch:63
+
+00:00:04.142 [debug]   HighMem zone: 1835008 pages, LIFO batch:63
+
+00:00:04.142 [info]  random: get_random_bytes called from start_kernel+0xa8/0x440 with crng_init=0
+
+00:00:04.143 [info]  percpu: Embedded 16 pages/cpu s34508 r8192 d22836 u65536
+
+00:00:04.143 [debug] pcpu-alloc: s34508 r8192 d22836 u65536 alloc=16*4096
+
+00:00:04.143 [debug] pcpu-alloc: [0] 0 [0] 1 [0] 2 [0] 3
+
+00:00:04.143 [info]  Built 1 zonelists, mobility grouping on.  Total pages: 2029888
+
+00:00:04.143 [info]  Kernel command line: coherent_pool=1M 8250.nr_uarts=1 cma=64M bcm2708_fb.fbwidth=0 bcm2708_fb.fbheight=0 bcm2708_fb.fbswap=1 smsc95xx.macaddr=DC:A6:32:C5:B7:87 vc_mem.mem_base=0x3ec00000 vc_mem.mem_size=0x40000000  dwc_otg.lpm_enable=0 console=tty1 console=ttyS0,115200 fbcon=scrollback:1024k root=/dev/mmcblk0p2 rootfstype=squashfs rootwait consoleblank=0
+
+00:00:04.143 [info]  Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+
+00:00:04.143 [info]  Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+
+00:00:04.143 [info]  Memory: 7977232K/8126464K available (6144K kernel code, 384K rwdata, 1248K rodata, 2048K init, 411K bss, 83696K reserved, 65536K cma-reserved, 7274496K highmem)
+
+00:00:04.143 [info]  Virtual kernel memory layout:\x0a    vector  : 0xffff0000 - 0xffff1000   (   4 kB)\x0a    fixmap  : 0xffc00000 - 0xfff00000   (3072 kB)\x0a    vmalloc : 0xf0800000 - 0xff800000   ( 240 MB)\x0a    lowmem  : 0xc0000000 - 0xf0000000   ( 768 MB)\x0a    pkmap   : 0xbfe00000 - 0xc0000000   (   2 MB)\x0a    modules : 0xbf000000 - 0xbfe00000   (  14 MB)\x0a      .text : 0x(ptrval) - 0x(ptrval)   (8160 kB)\x0a      .init : 0x(ptrval) - 0x(ptrval)   (2048 kB)\x0a      .data : 0x(ptrval) - 0x(ptrval)   ( 385 kB)\x0a       .bss : 0x(ptrval) - 0x(ptrval)   ( 412 kB)
+
+00:00:04.143 [info]  SLUB: HWalign=64, Order=0-3, MinObjects=0, CPUs=4, Nodes=1
+
+00:00:04.143 [info]  rcu: Preemptible hierarchical RCU implementation.
+
+00:00:04.143 [info]  \x09Tasks RCU enabled.
+
+00:00:04.144 [info]  NR_IRQS: 16, nr_irqs: 16, preallocated irqs: 16
+
+00:00:04.144 [info]  GIC: Using split EOI/Deactivate mode
+
+00:00:04.144 [info]  arch_timer: cp15 timer(s) running at 54.00MHz (phys).
+
+00:00:04.144 [info]  clocksource: arch_sys_counter: mask: 0xffffffffffffff max_cycles: 0xc743ce346, max_idle_ns: 440795203123 ns
+
+00:00:04.144 [info]  sched_clock: 56 bits at 54MHz, resolution 18ns, wraps every 4398046511102ns
+
+00:00:04.144 [info]  Switching to timer-based delay loop, resolution 18ns
+
+00:00:04.144 [info]  Console: colour dummy device 80x30
+
+00:00:04.144 [info]  console [tty1] enabled
+
+00:00:04.145 [info]  Calibrating delay loop (skipped), value calculated using timer frequency.. 108.00 BogoMIPS (lpj=540000)
+
+00:00:04.145 [info]  pid_max: default: 32768 minimum: 301
+
+00:00:04.145 [info]  Mount-cache hash table entries: 2048 (order: 1, 8192 bytes)
+
+00:00:04.145 [info]  Mountpoint-cache hash table entries: 2048 (order: 1, 8192 bytes)
+
+00:00:04.146 [info]  CPU: Testing write buffer coherency: ok
+
+00:00:04.146 [info]  CPU0: thread -1, cpu 0, socket 0, mpidr 80000000
+
+00:00:04.146 [info]  Setting up static identity map for 0x200000 - 0x20003c
+
+00:00:04.146 [info]  rcu: Hierarchical SRCU implementation.
+
+00:00:04.146 [info]  smp: Bringing up secondary CPUs ...
+
+00:00:04.147 [info]  CPU1: thread -1, cpu 1, socket 0, mpidr 80000001
+
+00:00:04.147 [info]  CPU2: thread -1, cpu 2, socket 0, mpidr 80000002
+
+00:00:04.147 [info]  CPU3: thread -1, cpu 3, socket 0, mpidr 80000003
+
+00:00:04.148 [info]  smp: Brought up 1 node, 4 CPUs
+
+00:00:04.148 [info]  SMP: Total of 4 processors activated (432.00 BogoMIPS).
+
+00:00:04.149 [info]  mount: mounting /dev/mmcblk0p3 on /root failed: Invalid argument
+
+00:00:04.149 [info]  CPU: All CPU(s) started in HYP mode.
+
+00:00:04.149 [info]  CPU: Virtualization extensions available.
+
+00:00:04.150 [info]  devtmpfs: initialized
+
+00:00:04.150 [info]  VFP support v0.3: implementor 41 architecture 3 part 40 variant 8 rev 0
+
+00:00:04.150 [info]  clocksource: jiffies: mask: 0xffffffff max_cycles: 0xffffffff, max_idle_ns: 19112604462750000 ns
+
+00:00:04.150 [info]  futex hash table entries: 1024 (order: 4, 65536 bytes)
+
+00:00:04.151 [info]  pinctrl core: initialized pinctrl subsystem
+
+00:00:04.151 [info]  NET: Registered protocol family 16
+
+00:00:04.151 [info]  DMA: preallocated 1024 KiB pool for atomic coherent allocations
+
+00:00:04.151 [info]  Serial: AMBA PL011 UART driver
+
+00:00:04.151 [info]  console [pstore-1] enabled
+
+00:00:04.151 [info]  pstore: Registered ramoops as persistent store backend
+
+00:00:04.151 [info]  ramoops: attached 0x100000@0xb000000, ecc: 16/0
+
+00:00:04.151 [info]  bcm2835-mbox fe00b880.mailbox: mailbox enabled
+
+00:00:04.151 [info]  raspberrypi-firmware soc:firmware: Attached to firmware from 2020-06-01 13:24, variant start_x
+
+00:00:04.151 [info]  raspberrypi-firmware soc:firmware: Firmware hash is 6379679d1ec6a8c746d7e77e015f5b56b939976f
+
+00:00:04.152 [info]  bcm2835-dma fe007000.dma: DMA legacy API manager at (ptrval), dmachans=0x1
+
+00:00:04.152 [info]  vgaarb: loaded
+
+00:00:04.152 [info]  SCSI subsystem initialized
+
+00:00:04.152 [info]  usbcore: registered new interface driver usbfs
+
+00:00:04.152 [info]  usbcore: registered new interface driver hub
+
+00:00:04.153 [info]  usbcore: registered new device driver usb
+
+00:00:04.153 [info]  clocksource: Switched to clocksource arch_sys_counter
+
+00:00:04.153 [info]  NET: Registered protocol family 2
+
+00:00:04.153 [info]  tcp_listen_portaddr_hash hash table entries: 512 (order: 0, 6144 bytes)
+
+00:00:04.154 [info]  TCP established hash table entries: 8192 (order: 3, 32768 bytes)
+
+00:00:04.154 [info]  TCP bind hash table entries: 8192 (order: 4, 65536 bytes)
+
+00:00:04.154 [info]  TCP: Hash tables configured (established 8192 bind 8192)
+
+00:00:04.154 [info]  UDP hash table entries: 512 (order: 2, 16384 bytes)
+
+00:00:04.154 [info]  UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+
+00:00:04.155 [info]  NET: Registered protocol family 1
+
+00:00:04.159 [debug] PCI: CLS 0 bytes, default 64
+
+00:00:04.159 [info]  Initialise system trusted keyrings
+
+00:00:04.160 [info]  workingset: timestamp_bits=14 max_order=21 bucket_order=7
+
+00:00:04.160 [info]  squashfs: version 4.0 (2009/01/31) Phillip Lougher
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 137/4096 bits entropy
+
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 508/4096 bits entropy
+
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 844/4096 bits entropy
+
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 1149/4096 bits entropy
+
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 1425/4096 bits entropy
+
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 1676/4096 bits entropy
+
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 1902/4096 bits entropy
+
+
+00:00:04.160 [debug] Jan  1 00:00:04 rngd: Added 2108/4096 bits entropy
+
+
+00:00:04.161 [debug] Jan  1 00:00:04 rngd: Added 2294/4096 bits entropy
+
+
+00:00:04.161 [debug] Jan  1 00:00:04 rngd: Added 2463/4096 bits entropy
+
+
+00:00:04.161 [debug] Jan  1 00:00:04 rngd: Added 2616/4096 bits entropy
+
+
+00:00:04.162 [info]  Key type asymmetric registered
+
+00:00:04.162 [info]  Asymmetric key parser 'x509' registered
+
+00:00:04.162 [info]  bounce: pool size: 64 pages
+
+00:00:04.162 [info]  Block layer SCSI generic (bsg) driver version 0.4 loaded (major 250)
+
+00:00:04.162 [info]  io scheduler noop registered
+
+00:00:04.163 [info]  io scheduler cfq registered (default)
+
+00:00:04.163 [info]  brcm-pcie fd500000.pcie: dmabounce: initialised - 32768 kB, threshold 0x00000000c0000000
+
+00:00:04.163 [warn]  brcm-pcie fd500000.pcie: could not get clock
+
+00:00:04.163 [info]  brcm-pcie fd500000.pcie: host bridge /scb/pcie@7d500000 ranges:
+
+00:00:04.163 [info]  brcm-pcie fd500000.pcie:   MEM 0x600000000..0x603ffffff -> 0xf8000000
+
+00:00:04.163 [info]  brcm-pcie fd500000.pcie: link up, 5.0 Gbps x1 (!SSC)
+
+00:00:04.163 [info]  brcm-pcie fd500000.pcie: PCI host bridge to bus 0000:00
+
+00:00:04.163 [info]  pci_bus 0000:00: root bus resource [bus 00-01]
+
+00:00:04.163 [info]  pci_bus 0000:00: root bus resource [mem 0x600000000-0x603ffffff] (bus address [0xf8000000-0xfbffffff])
+
+00:00:04.163 [debug] pci 0000:00:00.0: [14e4:2711] type 01 class 0x060400
+
+00:00:04.163 [debug] pci 0000:00:00.0: PME# supported from D0 D3hot
+
+00:00:04.163 [info]  PCI: bus0: Fast back to back transfers disabled
+
+00:00:04.163 [info]  pci 0000:00:00.0: bridge configuration invalid ([bus 00-00]), reconfiguring
+
+00:00:04.164 [debug] pci 0000:01:00.0: [1106:3483] type 00 class 0x0c0330
+
+00:00:04.164 [debug] pci 0000:01:00.0: reg 0x10: [mem 0x00000000-0x00000fff 64bit]
+
+00:00:04.164 [warn]  Ignoring non-zero exit status from mount ["-t", "f2fs", "-o", "rw", "/dev/mmcblk0p3", "/root"]
+
+00:00:04.164 [debug] pci 0000:01:00.0: PME# supported from D0 D3hot
+
+00:00:04.164 [info]  PCI: bus1: Fast back to back transfers disabled
+
+00:00:04.164 [debug] pci_bus 0000:01: busn_res: [bus 01] end is updated to 01
+
+00:00:04.165 [info]  pci 0000:00:00.0: BAR 8: assigned [mem 0x600000000-0x6000fffff]
+
+00:00:04.165 [info]  pci 0000:01:00.0: BAR 0: assigned [mem 0x600000000-0x600000fff 64bit]
+
+00:00:04.165 [info]  pci 0000:00:00.0: PCI bridge to [bus 01]
+
+00:00:04.165 [info]  pci 0000:00:00.0:   bridge window [mem 0x600000000-0x6000fffff]
+
+00:00:04.165 [info]  pci 0000:00:00.0: enabling device (0140 -> 0142)
+
+00:00:04.165 [info]  pci 0000:01:00.0: enabling device (0140 -> 0142)
+
+00:00:04.165 [info]  pci 0000:01:00.0: quirk_usb_early_handoff+0x0/0x7cc took 54216 usecs
+
+00:00:04.165 [error] bcm2708_fb soc:fb: Unable to determine number of FB's. Assuming 1
+
+00:00:04.165 [info]  bcm2708_fb soc:fb: FB found 1 display(s)
+
+00:00:04.166 [error] raspberrypi-firmware soc:firmware: Request 0x00048003 returned status 0x80000001
+
+00:00:04.166 [error] bcm2708_fb soc:fb: Failed to allocate GPU framebuffer (-22)
+
+00:00:04.166 [error] bcm2708_fb soc:fb: probe failed, err -22
+
+00:00:04.166 [warn]  bcm2708_fb: probe of soc:fb failed with error -22
+
+00:00:04.166 [info]  Serial: 8250/16550 driver, 1 ports, IRQ sharing enabled
+
+00:00:04.166 [info]  iproc-rng200 fe104000.rng: hwrng registered
+
+00:00:04.166 [info]  vc-mem: phys_addr:0x00000000 mem_base=0x3ec00000 mem_size:0x40000000(1024 MiB)
+
+00:00:04.166 [info]  vc-sm: Videocore shared memory driver
+
+00:00:04.166 [info]  gpiomem-bcm2835 fe200000.gpiomem: Initialised: Registers at 0xfe200000
+
+00:00:04.166 [info]  brd: module loaded
+
+00:00:04.166 [info]  loop: module loaded
+
+00:00:04.167 [info]  Loading iSCSI transport class v2.0-870.
+
+00:00:04.167 [error] spi-bcm2835 fe204000.spi: could not get clk: -517
+
+00:00:04.167 [info]  libphy: Fixed MDIO Bus: probed
+
+00:00:04.167 [warn]  bcmgenet fd580000.genet: failed to get enet clock
+
+00:00:04.167 [info]  bcmgenet fd580000.genet: GENET 5.0 EPHY: 0x0000
+
+00:00:04.167 [warn]  bcmgenet fd580000.genet: failed to get enet-wol clock
+
+00:00:04.167 [debug] Jan  1 00:00:04 rngd: Added 2755/4096 bits entropy
+
+
+00:00:04.167 [warn]  bcmgenet fd580000.genet: failed to get enet-eee clock
+
+00:00:04.167 [debug] Jan  1 00:00:04 rngd: Added 2880/4096 bits entropy
+
+
+00:00:04.167 [warn]  bcmgenet: Skipping UMAC reset
+
+00:00:04.167 [debug] Jan  1 00:00:04 rngd: Added 2994/4096 bits entropy
+
+
+00:00:04.167 [warn]  unimac-mdio unimac-mdio.-19: DMA mask not set
+
+00:00:04.167 [debug] Jan  1 00:00:04 rngd: Added 3033/4096 bits entropy
+
+
+00:00:04.167 [debug] Jan  1 00:00:04 rngd: Added 3069/4096 bits entropy
+
+
+00:00:04.167 [info]  libphy: bcmgenet MII bus: probed
+
+00:00:04.167 [debug] Jan  1 00:00:04 rngd: Added 3101/4096 bits entropy
+
+
+00:00:04.168 [info]  unimac-mdio unimac-mdio.-19: Broadcom UniMAC MDIO bus at 0x(ptrval)
+
+00:00:04.168 [debug] Jan  1 00:00:04 rngd: Added 3130/4096 bits entropy
+
+
+00:00:04.168 [debug] Jan  1 00:00:04 rngd: Added 3157/4096 bits entropy
+
+
+00:00:04.168 [info]  xhci_hcd 0000:01:00.0: xHCI Host Controller
+
+00:00:04.168 [debug] Jan  1 00:00:04 rngd: Added 3181/4096 bits entropy
+
+
+00:00:04.168 [debug] Jan  1 00:00:04 rngd: Added 3202/4096 bits entropy
+
+
+00:00:04.168 [debug] Jan  1 00:00:04 rngd: Added 3222/4096 bits entropy
+
+
+00:00:04.168 [info]  xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 1
+
+00:00:04.168 [info]  xhci_hcd 0000:01:00.0: hcc params 0x002841eb hci version 0x100 quirks 0x0000001000000890
+
+00:00:04.168 [warn]  genirq: irq_chip Brcm_MSI did not update eff. affinity mask of irq 55
+
+00:00:04.168 [info]  usb usb1: New USB device found, idVendor=1d6b, idProduct=0002, bcdDevice= 4.19
+
+00:00:04.168 [info]  usb usb1: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+
+00:00:04.168 [info]  usb usb1: Product: xHCI Host Controller
+
+00:00:04.168 [info]  usb usb1: Manufacturer: Linux 4.19.118 xhci-hcd
+
+00:00:04.168 [info]  usb usb1: SerialNumber: 0000:01:00.0
+
+00:00:04.169 [info]  hub 1-0:1.0: USB hub found
+
+00:00:04.169 [info]  hub 1-0:1.0: 1 port detected
+
+00:00:04.169 [info]  xhci_hcd 0000:01:00.0: xHCI Host Controller
+
+00:00:04.169 [info]  xhci_hcd 0000:01:00.0: new USB bus registered, assigned bus number 2
+
+00:00:04.169 [info]  xhci_hcd 0000:01:00.0: Host supports USB 3.0 SuperSpeed
+
+00:00:04.169 [info]  usb usb2: New USB device found, idVendor=1d6b, idProduct=0003, bcdDevice= 4.19
+
+00:00:04.169 [info]  usb usb2: New USB device strings: Mfr=3, Product=2, SerialNumber=1
+
+00:00:04.169 [info]  usb usb2: Product: xHCI Host Controller
+
+00:00:04.169 [info]  usb usb2: Manufacturer: Linux 4.19.118 xhci-hcd
+
+00:00:04.169 [info]  usb usb2: SerialNumber: 0000:01:00.0
+
+00:00:04.169 [info]  hub 2-0:1.0: USB hub found
+
+00:00:04.170 [debug] Jan  1 00:00:04 rngd: Added 3240/4096 bits entropy
+
+
+00:00:04.170 [debug] Jan  1 00:00:04 rngd: Added 3256/4096 bits entropy
+
+
+00:00:04.170 [debug] Jan  1 00:00:04 rngd: Added 3271/4096 bits entropy
+
+
+00:00:04.170 [debug] Jan  1 00:00:04 rngd: Added 3284/4096 bits entropy
+
+
+00:00:04.170 [debug] Jan  1 00:00:04 rngd: Added 3296/4096 bits entropy
+
+
+00:00:04.170 [info]  hub 2-0:1.0: 4 ports detected
+
+00:00:04.170 [debug] Jan  1 00:00:04 rngd: Added 3307/4096 bits entropy
+
+
+00:00:04.170 [debug] Jan  1 00:00:04 rngd: Added 3317/4096 bits entropy
+
+
+00:00:04.170 [info]  dwc_otg: version 3.00a 10-AUG-2012 (platform bus)
+
+00:00:04.171 [debug] dwc_otg: FIQ enabled
+
+00:00:04.171 [debug] dwc_otg: NAK holdoff enabled
+
+00:00:04.171 [debug] dwc_otg: FIQ split-transaction FSM enabled
+
+00:00:04.171 [debug] Module dwc_common_port init
+
+00:00:04.171 [info]  usbcore: registered new interface driver usb-storage
+
+00:00:04.171 [info]  i2c /dev entries driver
+
+00:00:04.171 [info]  bcm2835-wdt bcm2835-wdt: Broadcom BCM2835 watchdog timer
+
+00:00:04.171 [info]  sdhci: Secure Digital Host Controller Interface driver
+
+00:00:04.171 [info]  sdhci: Copyright(c) Pierre Ossman
+
+00:00:04.171 [info]  mmc-bcm2835 fe300000.mmcnr: could not get clk, deferring probe
+
+00:00:04.171 [info]  sdhci-pltfm: SDHCI platform and OF driver helper
+
+00:00:04.172 [info]  ledtrig-cpu: registered to indicate activity on CPUs
+
+00:00:04.172 [info]  hidraw: raw HID events driver (C) Jiri Kosina
+
+00:00:04.172 [info]  usbcore: registered new interface driver usbhid
+
+00:00:04.172 [info]  usbhid: USB HID core driver
+
+00:00:04.172 [info]  vchiq: vchiq_init_state: slot_zero = (ptrval), is_master = 0
+
+00:00:04.172 [info]  [vc_sm_connected_init]: start
+
+00:00:04.172 [info]  [vc_sm_connected_init]: end - returning 0
+
+00:00:04.173 [info]  NET: Registered protocol family 10
+
+00:00:04.173 [info]  Segment Routing with IPv6
+
+00:00:04.173 [info]  NET: Registered protocol family 17
+
+00:00:04.173 [debug] Jan  1 00:00:04 rngd: Added 3326/4096 bits entropy
+
+
+00:00:04.173 [debug] Jan  1 00:00:04 rngd: Added 3334/4096 bits entropy
+
+
+00:00:04.173 [info]  Registering SWP/SWPB emulation handler
+
+00:00:04.173 [debug] Jan  1 00:00:04 rngd: Added 3341/4096 bits entropy
+
+
+00:00:04.173 [debug] Jan  1 00:00:04 rngd: Added 3348/4096 bits entropy
+
+
+00:00:04.173 [info]  Loading compiled-in X.509 certificates
+
+00:00:04.173 [debug] Jan  1 00:00:04 rngd: Added 3354/4096 bits entropy
+
+
+00:00:04.173 [info]  pstore: Using compression: deflate
+
+00:00:04.173 [debug] Jan  1 00:00:04 rngd: Added 3359/4096 bits entropy
+
+
+00:00:04.173 [info]  uart-pl011 fe201000.serial: cts_event_workaround enabled
+
+00:00:04.173 [debug] Jan  1 00:00:04 rngd: Added 3364/4096 bits entropy
+
+
+00:00:04.173 [info]  fe201000.serial: ttyAMA0 at MMIO 0xfe201000 (irq = 34, base_baud = 0) is a PL011 rev2
+
+00:00:04.173 [info]  console [ttyS0] disabled
+
+00:00:04.173 [info]  fe215040.serial: ttyS0 at MMIO 0x0 (irq = 37, base_baud = 62500000) is a 16550
+
+00:00:04.174 [info]  console [ttyS0] enabled
+
+00:00:04.174 [info]  bcm2835-power bcm2835-power: Broadcom BCM2835 power domains driver
+
+00:00:04.174 [info]  brcmstb_thermal fd5d2200.thermal: registered AVS TMON of-sensor driver
+
+00:00:04.174 [warn]  Formatting application partition. If this hangs, it could be waiting on the urandom pool to be initialized
+
+00:00:04.174 [info]  mmc-bcm2835 fe300000.mmcnr: mmc_debug:0 mmc_debug2:0
+
+00:00:04.174 [debug] Jan  1 00:00:04 rngd: Added 3369/4096 bits entropy
+
+
+00:00:04.174 [info]  mmc-bcm2835 fe300000.mmcnr: DMA channel allocated
+
+00:00:04.174 [debug] Jan  1 00:00:04 rngd: Added 3373/4096 bits entropy
+
+
+00:00:04.174 [debug] Jan  1 00:00:04 rngd: Added 3377/4096 bits entropy
+
+
+00:00:04.174 [info]  sdhci-iproc fe340000.emmc2: Linked as a consumer to regulator.3
+
+00:00:04.174 [debug] Jan  1 00:00:04 rngd: Reading entropy from Hardware RNG Device
+
+
+00:00:04.174 [info]  sdhci-iproc fe340000.emmc2: Linked as a consumer to regulator.4
+
+00:00:04.174 [warn]  mmc1: queuing unknown CIS tuple 0x80 (2 bytes)
+
+00:00:04.174 [warn]  mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+
+00:00:04.174 [warn]  mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+
+00:00:04.174 [info]  mmc0: SDHCI controller on fe340000.emmc2 [fe340000.emmc2] using ADMA
+
+00:00:04.174 [info]  of_cfs_init
+
+00:00:04.175 [info]  of_cfs_init: OK
+
+00:00:04.175 [info]  Waiting for root device /dev/mmcblk0p2...
+
+00:00:04.175 [warn]  mmc1: queuing unknown CIS tuple 0x80 (7 bytes)
+
+00:00:04.175 [warn]  mmc1: queuing unknown CIS tuple 0x80 (3 bytes)
+
+00:00:04.175 [info]  random: fast init done
+
+00:00:04.175 [info]  mmc1: new high speed SDIO card at address 0001
+
+00:00:04.175 [info]  mmc0: new ultra high speed DDR50 SDHC card at address 59b4
+
+00:00:04.175 [info]  mmcblk0: mmc0:59b4 USDU1 14.9 GiB
+
+00:00:04.175 [info]   mmcblk0: p1 p2 p3
+
+00:00:04.175 [info]  usb 1-1: new high-speed USB device number 2 using xhci_hcd
+
+00:00:04.175 [info]  VFS: Mounted root (squashfs filesystem) readonly on device 179:2.
+
+00:00:04.175 [info]  devtmpfs: mounted
+
+00:00:04.176 [info]  Freeing unused kernel memory: 2048K
+
+00:00:04.176 [info]  Run /sbin/init as init process
+
+00:00:04.176 [info]  F2FS-fs (mmcblk0p3): Magic Mismatch, valid(0xf2f52010) - read(0xffffffff)
+
+00:00:04.176 [error] F2FS-fs (mmcblk0p3): Can't find valid F2FS filesystem in 1th superblock
+
+00:00:04.176 [info]  F2FS-fs (mmcblk0p3): Magic Mismatch, valid(0xf2f52010) - read(0xffffffff)
+
+00:00:04.176 [error] F2FS-fs (mmcblk0p3): Can't find valid F2FS filesystem in 2th superblock
+
+00:00:04.176 [info]  F2FS-fs (mmcblk0p3): Magic Mismatch, valid(0xf2f52010) - read(0xffffffff)
+
+00:00:04.176 [error] F2FS-fs (mmcblk0p3): Can't find valid F2FS filesystem in 1th superblock
+
+00:00:04.176 [info]  F2FS-fs (mmcblk0p3): Magic Mismatch, valid(0xf2f52010) - read(0xffffffff)
+
+00:00:04.176 [info]  usb 1-1: New USB device found, idVendor=2109, idProduct=3431, bcdDevice= 4.21
+
+00:00:04.176 [error] F2FS-fs (mmcblk0p3): Can't find valid F2FS filesystem in 2th superblock
+
+00:00:04.176 [info]  usb 1-1: New USB device strings: Mfr=0, Product=1, SerialNumber=0
+
+00:00:04.177 [warn]  erlinit: Cannot mount /dev/mmcblk0p3 at /root: Invalid argument
+
+00:00:04.177 [info]  usb 1-1: Product: USB2.0 Hub
+
+00:00:04.177 [info]  hub 1-1:1.0: USB hub found
+
+00:00:04.177 [info]  hub 1-1:1.0: 4 ports detected
+
+00:00:04.177 [info]  usb 1-1.1: new high-speed USB device number 3 using xhci_hcd
+
+00:00:04.177 [info]  usb 1-1.1: New USB device found, idVendor=2c7c, idProduct=0296, bcdDevice= 0.00
+
+00:00:04.177 [info]  usb 1-1.1: New USB device strings: Mfr=3, Product=2, SerialNumber=4
+
+00:00:04.177 [info]  usb 1-1.1: Product: Qualcomm CDMA Technologies MSM
+
+00:00:04.177 [info]  usb 1-1.1: Manufacturer: Qualcomm, Incorporated
+
+00:00:04.177 [info]  usb 1-1.1: SerialNumber: 8b00d7d3
+
+00:00:04.177 [warn]  heart: kernel watchdog activated (interval 5s)
+
+00:00:04.178 [info]  F2FS-fs (mmcblk0p3): Magic Mismatch, valid(0xf2f52010) - read(0xffffffff)
+
+00:00:04.178 [error] F2FS-fs (mmcblk0p3): Can't find valid F2FS filesystem in 1th superblock
+
+00:00:04.178 [info]  random: crng init done
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3380/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3383/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3386/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3388/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3454/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3514/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3569/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3618/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3663/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3703/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3740/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3773/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3804/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3831/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3856/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3878/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3898/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3917/4096 bits entropy
+
+
+00:00:04.219 [debug] Jan  1 00:00:04 rngd: Added 3934/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 3949/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 3962/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 3975/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 3986/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 3996/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 4006/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 4014/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 4022/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 4028/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Added 4035/4096 bits entropy
+
+
+00:00:04.220 [debug] Jan  1 00:00:04 rngd: Pool full at 4096, sleeping!
+
+
+00:00:04.226 [warn]  vc_sm_cma: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:04.226 [info]  bcm2835_vc_sm_cma_probe: Videocore shared memory driver
+
+00:00:04.230 [info]  [vc_sm_connected_init]: start
+
+00:00:04.240 [info]  [vc_sm_connected_init]: installed successfully
+
+00:00:04.380 [info]  media: Linux media interface: v0.10
+
+00:00:04.440 [info]  videodev: Linux video capture interface: v2.00
+
+00:00:04.500 [warn]  bcm2835_mmal_vchiq: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:04.523 [warn]  bcm2835_codec: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:04.523 [info]  bcm2835-codec bcm2835-codec: Device registered as /dev/video10
+
+00:00:04.530 [info]  bcm2835-codec bcm2835-codec: Loaded V4L2 decode
+
+00:00:04.544 [info]  bcm2835-codec bcm2835-codec: Device registered as /dev/video11
+
+00:00:04.544 [info]  bcm2835-codec bcm2835-codec: Loaded V4L2 encode
+
+00:00:04.570 [info]  bcm2835-codec bcm2835-codec: Device registered as /dev/video12
+
+00:00:04.570 [info]  bcm2835-codec bcm2835-codec: Loaded V4L2 isp
+
+00:00:04.600 [warn]  bcm2835_v4l2: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:05.343 [info]  rpivid-mem feb00000.hevc-decoder: rpivid-hevcmem initialised: Registers at 0xfeb00000 length 0x0000ffff
+
+00:00:05.343 [info]  rpivid-mem feb10000.rpivid-local-intc: rpivid-intcmem initialised: Registers at 0xfeb10000 length 0x00000fff
+
+00:00:05.365 [info]  rpivid-mem feb20000.h264-decoder: rpivid-h264mem initialised: Registers at 0xfeb20000 length 0x0000ffff
+
+00:00:05.365 [info]  rpivid-mem feb30000.vp9-decoder: rpivid-vp9mem initialised: Registers at 0xfeb30000 length 0x0000ffff
+
+00:00:05.533 [info]  usbcore: registered new interface driver option
+
+00:00:05.533 [info]  usbserial: USB Serial support registered for GSM modem (1-port)
+
+00:00:05.540 [info]  option 1-1.1:1.0: GSM modem (1-port) converter detected
+
+00:00:05.554 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB0
+
+00:00:05.554 [info]  option 1-1.1:1.1: GSM modem (1-port) converter detected
+
+00:00:05.576 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB1
+
+00:00:05.576 [info]  option 1-1.1:1.2: GSM modem (1-port) converter detected
+
+00:00:05.576 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB2
+
+00:00:05.590 [info]  option 1-1.1:1.3: GSM modem (1-port) converter detected
+
+00:00:05.590 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB3
+
+00:00:05.705 [info]  usbcore: registered new interface driver cdc_wdm
+
+00:00:05.705 [info]  qmi_wwan 1-1.1:1.4: cdc-wdm0: USB WDM device
+
+00:00:05.716 [info]  qmi_wwan 1-1.1:1.4 wwan0: register 'qmi_wwan' at usb-0000:01:00.0-1.1, WWAN/QMI device, 76:19:75:3f:58:c5
+
+00:00:05.723 [info]  usbcore: registered new interface driver qmi_wwan
+
+00:00:06.430 [info]  cfg80211: Loading compiled-in X.509 certificates for regulatory database
+
+00:00:06.470 [info]  cfg80211: Loaded X.509 cert 'sforshee: 00b28ddf47aef9cea7'
+
+00:00:07.660 [info]  brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6
+
+00:00:07.683 [info]  	F2FS-tools: mkfs.f2fs Ver: 1.13.0 (2019-09-24)
+
+00:00:07.683 [info]  Info: Disable heap-based policy
+
+00:00:07.683 [info]  Info: Debug level = 0
+
+00:00:07.683 [info]  Info: Trim is enabled
+
+00:00:07.683 [info]  Info: Segments per section = 1
+
+00:00:07.684 [info]  Info: Sections per zone = 1
+
+00:00:07.684 [info]  Info: sector size = 512
+
+00:00:07.684 [info]  Info: total sectors = 30521292 (14902 MB)
+
+00:00:07.684 [info]  Info: zone aligned segment0 blkaddr: 512
+
+00:00:07.684 [info]  Info: format version with
+
+00:00:07.684 [info]    "Linux version 4.19.118 (nerves@8eb064424d90) (gcc version 9.2.0 (crosstool-NG 1.24.0.71-4fa0ba1)) #2 SMP PREEMPT Fri Oct 30 15:17:56 UTC 2020"
+
+00:00:07.684 [info]  Info: [/dev/mmcblk0p3] Discarding device
+
+00:00:07.684 [info]  Info: This device doesn't support BLKSECDISCARD
+
+00:00:07.684 [info]  Info: Discarded 14902 MB
+
+00:00:07.684 [info]  Info: Overprovision ratio = 1.650%
+
+00:00:07.684 [info]  Info: Overprovision segments = 248 (GC reserved = 129)
+
+00:00:07.684 [info]  Info: format successful
+
+00:00:07.779 [warn]  snd_bcm2835: module is from the staging directory, the quality is unknown, you have been warned.
+
+00:00:07.780 [info]  bcm2835_audio soc:audio: card created with 8 channels
+
+00:00:07.780 [warn]  f2fs_msg: 6 callbacks suppressed
+
+00:00:07.780 [info]  F2FS-fs (mmcblk0p3): Found nat_bits in checkpoint
+
+00:00:07.864 [info]  brcmfmac: brcmf_fw_alloc_request: using brcm/brcmfmac43455-sdio for chip BCM4345/6
+
+00:00:07.891 [info]  brcmfmac: brcmf_c_preinit_dcmds: Firmware: BCM4345/6 wl0: May  2 2019 02:46:17 version 7.45.189 (r714228 CY) FWID 01-e1db26e2
+
+00:00:07.952 [info]  F2FS-fs (mmcblk0p3): Mounted with checkpoint version = 754e7ddd
+
+00:00:08.339 [debug] VintageNet(ppp0): :configured -> internal configure (VintageNetMobile)
+
+00:00:08.422 [info]  Jan  1 00:00:08 pppd[248]: pppd 2.4.8 started by root, uid 0
+
+00:00:08.422 [info]  PPP generic driver version 2.4.2
+
+00:00:08.538 [debug] VintageNet(wlan0): :configured -> internal configure (VintageNetWiFi)
+
+00:00:08.584 [info]  IPv6: ADDRCONF(NETDEV_UP): wlan0: link is not ready
+
+00:00:08.584 [info]  brcmfmac: brcmf_cfg80211_set_power_mgmt: power save enabled
+
+00:00:08.592 [debug] udhcpc(wlan0): udhcpc: started, v1.31.1
+
+00:00:08.595 [info]  wlan0 dhcp deconfig: %{interface: "wlan0"}
+
+00:00:08.604 [info]  RTC (NervesTime.FileTime) reports that the time hasn't been set.
+
+00:00:00.000 [info]  nerves_time set system clock to 2020-07-25 00:00:00 UTC
+
+00:00:00.008 [debug] Starting /usr/sbin/ntpd with: ["-n", "-S", "/srv/erlang/lib/nerves_time-0.4.2/priv/ntpd_script", "-p", "0.pool.ntp.org", "-p", "1.pool.ntp.org", "-p", "2.pool.ntp.org", "-p", "3.pool.ntp.org"]
+
+00:00:00.033 [debug] udhcpc(wlan0): udhcpc: sending discover
+
+00:00:00.822 [info]  Jul 25 00:00:00 chat[261]: abort on (BUSY)
+
+00:00:00.822 [info]  Jul 25 00:00:00 chat[261]: abort on (NO CARRIER)
+
+00:00:00.823 [info]  Jul 25 00:00:00 chat[261]: abort on (NO DIALTONE)
+
+00:00:00.823 [info]  Jul 25 00:00:00 chat[261]: abort on (NO DIAL TONE)
+
+00:00:00.823 [info]  Jul 25 00:00:00 chat[261]: abort on (NO ANSWER)
+
+00:00:00.823 [info]  Jul 25 00:00:00 chat[261]: abort on (DELAYED)
+
+00:00:00.823 [info]  Jul 25 00:00:00 chat[261]: timeout set to 10 seconds
+
+00:00:00.823 [info]  Jul 25 00:00:00 chat[261]: report (CONNECT)
+
+00:00:00.823 [info]  Jul 25 00:00:00 chat[261]: send (+++^M)
+
+00:00:00.863 [info]  Jul 25 00:00:00 chat[261]: send (AT^M)
+
+00:00:00.893 [info]  Jul 25 00:00:00 chat[261]: expect (OK)
+
+00:00:00.893 [info]  Jul 25 00:00:00 chat[261]: ^M
+
+00:00:00.894 [info]  Jul 25 00:00:00 chat[261]: OK
+
+00:00:00.894 [info]  Jul 25 00:00:00 chat[261]:  -- got it
+
+
+00:00:00.894 [info]  Jul 25 00:00:00 chat[261]: send (ATH^M)
+
+00:00:00.934 [info]  Jul 25 00:00:00 chat[261]: expect (OK)
+
+00:00:00.934 [info]  Jul 25 00:00:00 chat[261]: ^M
+
+00:00:00.935 [info]  Jul 25 00:00:00 chat[261]: ^M
+
+00:00:00.935 [info]  Jul 25 00:00:00 chat[261]: OK
+
+00:00:00.935 [info]  Jul 25 00:00:00 chat[261]:  -- got it
+
+
+00:00:00.935 [info]  Jul 25 00:00:00 chat[261]: send (ATZ^M)
+
+00:00:00.975 [info]  Jul 25 00:00:00 chat[261]: expect (OK)
+
+00:00:00.975 [info]  Jul 25 00:00:00 chat[261]: ^M
+
+00:00:00.978 [info]  Jul 25 00:00:00 chat[261]: ^M
+
+00:00:00.978 [info]  Jul 25 00:00:00 chat[261]: OK
+
+00:00:00.978 [info]  Jul 25 00:00:00 chat[261]:  -- got it
+
+
+00:00:00.979 [info]  Jul 25 00:00:00 chat[261]: send (ATQ0^M)
+
+00:00:01.029 [info]  Jul 25 00:00:01 chat[261]: expect (OK)
+
+00:00:01.029 [info]  Jul 25 00:00:01 chat[261]: ^M
+
+00:00:01.030 [info]  Jul 25 00:00:01 chat[261]: ATQ0^M^M
+
+00:00:01.030 [info]  Jul 25 00:00:01 chat[261]: OK
+
+00:00:01.030 [info]  Jul 25 00:00:01 chat[261]:  -- got it
+
+
+00:00:01.030 [info]  Jul 25 00:00:01 chat[261]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+00:00:01.081 [debug] wpa_supplicant: Successfully initialized wpa_supplicant
+
+00:00:01.237 [debug] wpa_supplicant: wlan0: CTRL-EVENT-REGDOM-CHANGE init=USER type=COUNTRY alpha2=NL
+
+00:00:01.262 [info]  Jul 25 00:00:01 chat[261]: expect (OK)
+
+00:00:01.262 [info]  Jul 25 00:00:01 chat[261]: ^M
+
+00:00:01.282 [info]  Jul 25 00:00:01 chat[261]: AT+CGDCONT=1,"IP","wm"^M^M
+
+00:00:01.282 [info]  Jul 25 00:00:01 chat[261]: OK
+
+00:00:01.282 [info]  Jul 25 00:00:01 chat[261]:  -- got it
+
+
+00:00:01.282 [info]  Jul 25 00:00:01 chat[261]: send (AT+QCFG="nwscanseq",02^M)
+
+00:00:01.514 [info]  Jul 25 00:00:01 chat[261]: expect (OK)
+
+00:00:01.514 [info]  Jul 25 00:00:01 chat[261]: ^M
+
+00:00:01.522 [info]  Jul 25 00:00:01 chat[261]: AT+QCFG="nwscanseq",02^M^M
+
+00:00:01.522 [info]  Jul 25 00:00:01 chat[261]: OK
+
+00:00:01.523 [info]  Jul 25 00:00:01 chat[261]:  -- got it
+
+
+00:00:01.523 [info]  Jul 25 00:00:01 chat[261]: send (AT+QCFG="nwscanmode",3^M)
+
+00:00:01.754 [info]  Jul 25 00:00:01 chat[261]: expect (OK)
+
+00:00:01.755 [info]  Jul 25 00:00:01 chat[261]: ^M
+
+00:00:01.755 [info]  Jul 25 00:00:01 chat[261]: AT+QCFG="nwscanmode",3^M^M
+
+00:00:01.755 [info]  Jul 25 00:00:01 chat[261]: OK
+
+00:00:01.755 [info]  Jul 25 00:00:01 chat[261]:  -- got it
+
+
+00:00:01.756 [info]  Jul 25 00:00:01 chat[261]: send (AT+QCFG="iotopmode",0^M)
+
+00:00:01.977 [info]  Jul 25 00:00:01 chat[261]: expect (OK)
+
+00:00:01.978 [info]  Jul 25 00:00:01 chat[261]: ^M
+
+00:00:01.978 [info]  Jul 25 00:00:01 chat[261]: AT+QCFG="iotopmode",0^M^M
+
+00:00:01.979 [info]  Jul 25 00:00:01 chat[261]: OK
+
+00:00:01.979 [info]  Jul 25 00:00:01 chat[261]:  -- got it
+
+
+00:00:01.979 [info]  Jul 25 00:00:01 chat[261]: send (ATDT*99***1#^M)
+
+00:00:02.110 [info]  Jul 25 00:00:02 chat[261]: expect (CONNECT)
+
+00:00:02.110 [info]  Jul 25 00:00:02 chat[261]: ^M
+
+00:00:02.113 [info]  Jul 25 00:00:02 chat[261]: ATDT*99***1#^M^M
+
+00:00:02.113 [info]  Jul 25 00:00:02 chat[261]: CONNECT
+
+00:00:02.113 [info]  Jul 25 00:00:02 chat[261]:  -- got it
+
+
+00:00:02.113 [info]  Jul 25 00:00:02 chat[261]: send (^M)
+
+00:00:02.124 [debug] Jul 25 00:00:02 pppd[248]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 261), status = 0x0
+
+00:00:02.124 [info]  Jul 25 00:00:02 pppd[248]: Serial connection established.
+
+00:00:02.149 [debug] Jul 25 00:00:02 pppd[248]: using channel 1
+
+00:00:02.150 [info]  Jul 25 00:00:02 pppd[248]: Using interface ppp0
+
+00:00:02.150 [info]  Jul 25 00:00:02 pppd[248]: Connect: ppp0 <--> /dev/ttyUSB3
+
+00:00:03.136 [debug] udhcpc(wlan0): udhcpc: sending discover
+
+00:00:03.151 [debug] Jul 25 00:00:03 pppd[248]: sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x816573fd> <pcomp> <accomp>]
+
+00:00:03.153 [debug] Jul 25 00:00:03 pppd[248]: rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0xc7a579a4> <pcomp> <accomp>]
+
+00:00:03.153 [debug] Jul 25 00:00:03 pppd[248]: No auth is possible
+
+00:00:03.153 [debug] Jul 25 00:00:03 pppd[248]: sent [LCP ConfRej id=0x0 <auth chap MD5>]
+
+00:00:03.154 [debug] Jul 25 00:00:03 pppd[248]: rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x816573fd> <pcomp> <accomp>]
+
+00:00:03.154 [debug] Jul 25 00:00:03 pppd[248]: rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xc7a579a4> <pcomp> <accomp>]
+
+00:00:03.154 [debug] Jul 25 00:00:03 pppd[248]: sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xc7a579a4> <pcomp> <accomp>]
+
+00:00:03.183 [info]  PPP BSD Compression module registered
+
+00:00:03.192 [debug] Jul 25 00:00:03 pppd[248]: sent [CCP ConfReq id=0x1 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+00:00:03.192 [debug] Jul 25 00:00:03 pppd[248]: sent [IPCP ConfReq id=0x1 <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+00:00:03.193 [debug] Jul 25 00:00:03 pppd[248]: rcvd [LCP DiscReq id=0x2 magic=0xc7a579a4]
+
+00:00:03.193 [debug] Jul 25 00:00:03 pppd[248]: rcvd [LCP ProtRej id=0x3 80 fd 01 01 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+00:00:03.193 [debug] Jul 25 00:00:03 pppd[248]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+00:00:03.193 [info]  PPP Deflate Compression module registered
+
+00:00:03.204 [debug] Jul 25 00:00:03 pppd[248]: rcvd [IPCP ConfReq id=0x0]
+
+00:00:03.204 [debug] Jul 25 00:00:03 pppd[248]: sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+
+00:00:03.204 [debug] Jul 25 00:00:03 pppd[248]: rcvd [IPCP ConfRej id=0x1 <compress VJ 0f 01>]
+
+00:00:03.204 [debug] Jul 25 00:00:03 pppd[248]: sent [IPCP ConfReq id=0x2 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+00:00:03.205 [debug] Jul 25 00:00:03 pppd[248]: rcvd [IPCP ConfReq id=0x1]
+
+00:00:03.205 [debug] Jul 25 00:00:03 pppd[248]: sent [IPCP ConfAck id=0x1]
+
+00:00:03.205 [debug] Jul 25 00:00:03 pppd[248]: rcvd [IPCP ConfNak id=0x2 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+00:00:03.205 [debug] Jul 25 00:00:03 pppd[248]: sent [IPCP ConfReq id=0x3 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+00:00:03.205 [debug] Jul 25 00:00:03 pppd[248]: rcvd [IPCP ConfAck id=0x3 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+00:00:03.205 [warn]  Jul 25 00:00:03 pppd[248]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+00:00:03.208 [debug] Jul 25 00:00:03 pppd[248]: Script /etc/ppp/ip-pre-up started (pid 270)
+
+00:00:03.213 [debug] Jul 25 00:00:03 pppd[248]: Script /etc/ppp/ip-pre-up finished (pid 270), status = 0x0
+
+00:00:03.213 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+00:00:03.213 [info]  Jul 25 00:00:03 pppd[248]: local  IP address 100.85.118.2
+
+00:00:03.214 [info]  Jul 25 00:00:03 pppd[248]: remote IP address 10.64.64.64
+
+00:00:03.214 [info]  Jul 25 00:00:03 pppd[248]: primary   DNS address 8.8.8.8
+
+00:00:03.214 [info]  Jul 25 00:00:03 pppd[248]: secondary DNS address 8.8.4.4
+
+00:00:03.215 [debug] Jul 25 00:00:03 pppd[248]: Script /etc/ppp/ip-up started (pid 271)
+
+00:00:03.217 [debug] Jul 25 00:00:03 pppd[248]: Script /etc/ppp/ip-up finished (pid 271), status = 0x0
+
+00:00:03.217 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+00:00:03.218 [info]  RouteManager: set_route ppp0 -> :internet
+
+00:00:03.816 [debug] wpa_supplicant: wlan0: Trying to associate with SSID '...'
+
+00:00:03.887 [info]  WPASupplicant ignoring {:event, "WPS-AP-AVAILABLE"}
+
+00:00:03.887 [info]  wpa_supplicant(wlan0): Trying to associate with SSID '...'
+
+00:00:06.236 [debug] udhcpc(wlan0): udhcpc: sending discover
+
+00:00:06.475 [debug] wpa_supplicant: wlan0: Associated with 6c:70:9f:db:cb:2c
+
+00:00:06.476 [debug] wpa_supplicant: wlan0: CTRL-EVENT-CONNECTED - Connection to 6c:70:9f:db:cb:2c completed [id=0 id_str=]
+
+00:00:06.476 [info]  wpa_supplicant(wlan0): Associated with 6c:70:9f:db:cb:2c
+
+00:00:06.477 [info]  Connected to AP: 6c:70:9f:db:cb:2c
+
+00:00:06.483 [info]  IPv6: ADDRCONF(NETDEV_CHANGE): wlan0: link becomes ready
+
+00:00:06.484 [debug] wpa_supplicant: wlan0: CTRL-EVENT-SUBNET-STATUS-UPDATE status=0
+
+00:00:06.485 [debug] wpa_supplicant: wlan0: CTRL-EVENT-REGDOM-CHANGE init=COUNTRY_IE type=COUNTRY alpha2=NL
+
+00:00:06.489 [info]  WPASupplicant ignoring {:event, "CTRL-EVENT-SUBNET-STATUS-UPDATE", %{"status" => "0"}}
+
+00:00:06.489 [info]  WPASupplicant ignoring {:event, "CTRL-EVENT-REGDOM-CHANGE", %{"alpha2" => "NL", "init" => "COUNTRY_IE", "type" => "COUNTRY"}}
+
+00:00:28.689 [debug] udhcpc(wlan0): udhcpc: sending discover
+
+00:00:28.763 [debug] udhcpc(wlan0): udhcpc: sending select for 192.168.0.120
+
+00:00:28.863 [debug] udhcpc(wlan0): udhcpc: lease of 192.168.0.120 obtained, lease time 7200
+
+00:00:28.866 [debug] udhcpc.renew(wlan0): %{broadcast: "192.168.0.255", dns: ["192.168.0.1"], hostname: "nerves-87f4", interface: "wlan0", ip: "192.168.0.120", lease: "7200", mask: "24", opt53: "05", opt58: "00000e10", opt59: "0000189c", router: ["192.168.0.1"], serverid: "192.168.0.1", siaddr: "192.168.0.1", subnet: "255.255.255.0"}
+
+00:00:28.873 [info]  RouteManager: set_route wlan0 -> :lan
+
+00:00:29.769 [warn]  Send "AT+QSPN" failed: {:error, "ERROR"}. Ignoring...
+
+00:00:35.312 [debug] Jul 25 00:00:35 pppd[248]: rcvd [LCP TermReq id=0x4]
+
+00:00:35.312 [info]  Jul 25 00:00:35 pppd[248]: LCP terminated by peer
+
+00:00:35.313 [info]  Jul 25 00:00:35 pppd[248]: Connect time 0.6 minutes.
+
+00:00:35.313 [info]  Jul 25 00:00:35 pppd[248]: Sent 600 bytes, received 0 bytes.
+
+00:00:35.315 [debug] Jul 25 00:00:35 pppd[248]: Script /etc/ppp/ip-down started (pid 289)
+
+00:00:35.315 [debug] Jul 25 00:00:35 pppd[248]: sent [LCP TermAck id=0x4]
+
+00:00:35.317 [info]  Jul 25 00:00:35 pppd[248]: Modem hangup
+
+00:00:35.317 [info]  Jul 25 00:00:35 pppd[248]: Connection terminated.
+
+00:00:35.318 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "600", CONNECT_TIME: "32", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+00:00:35.318 [info]  RouteManager: clear_route ppp0
+
+00:00:35.356 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+00:00:35.388 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+00:00:35.420 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+00:00:35.452 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+00:00:36.353 [debug] Jul 25 00:00:36 pppd[248]: Script /etc/ppp/ip-down finished (pid 289), status = 0x0
+
+00:00:37.972 [info]  RouteManager: set_connection_status wlan0 -> :internet
+
+524 out of 524 new messages shown.
+:ok
+
+08:37:43.646 [info]  Nov  2 08:37:43 chat[310]: abort on (BUSY)
+
+08:37:43.646 [info]  Nov  2 08:37:43 chat[310]: abort on (NO CARRIER)
+
+08:37:43.647 [info]  Nov  2 08:37:43 chat[310]: abort on (NO DIALTONE)
+
+08:37:43.647 [info]  Nov  2 08:37:43 chat[310]: abort on (NO DIAL TONE)
+
+08:37:43.647 [info]  Nov  2 08:37:43 chat[310]: abort on (NO ANSWER)
+
+08:37:43.647 [info]  Nov  2 08:37:43 chat[310]: abort on (DELAYED)
+
+08:37:43.647 [info]  Nov  2 08:37:43 chat[310]: timeout set to 10 seconds
+
+08:37:43.648 [info]  Nov  2 08:37:43 chat[310]: report (CONNECT)
+
+08:37:43.648 [info]  Nov  2 08:37:43 chat[310]: send (+++^M)
+
+08:37:43.687 [info]  Nov  2 08:37:43 chat[310]: send (AT^M)
+
+08:37:43.717 [info]  Nov  2 08:37:43 chat[310]: expect (OK)
+
+08:37:43.719 [info]  Nov  2 08:37:43 chat[310]: AT^M^M
+
+08:37:43.719 [info]  Nov  2 08:37:43 chat[310]: OK
+
+08:37:43.719 [info]  Nov  2 08:37:43 chat[310]:  -- got it
+
+
+08:37:43.719 [info]  Nov  2 08:37:43 chat[310]: send (ATH^M)
+
+08:37:43.759 [info]  Nov  2 08:37:43 chat[310]: expect (OK)
+
+08:37:43.759 [info]  Nov  2 08:37:43 chat[310]: ^M
+
+08:37:43.759 [info]  Nov  2 08:37:43 chat[310]: ATH^M^M
+
+08:37:43.759 [info]  Nov  2 08:37:43 chat[310]: OK
+
+08:37:43.759 [info]  Nov  2 08:37:43 chat[310]:  -- got it
+
+
+08:37:43.760 [info]  Nov  2 08:37:43 chat[310]: send (ATZ^M)
+
+08:37:43.800 [info]  Nov  2 08:37:43 chat[310]: expect (OK)
+
+08:37:43.800 [info]  Nov  2 08:37:43 chat[310]: ^M
+
+08:37:43.803 [info]  Nov  2 08:37:43 chat[310]: ATZ^M^M
+
+08:37:43.803 [info]  Nov  2 08:37:43 chat[310]: OK
+
+08:37:43.803 [info]  Nov  2 08:37:43 chat[310]:  -- got it
+
+
+08:37:43.803 [info]  Nov  2 08:37:43 chat[310]: send (ATQ0^M)
+
+08:37:43.852 [info]  Nov  2 08:37:43 chat[310]: expect (OK)
+
+08:37:43.853 [info]  Nov  2 08:37:43 chat[310]: ^M
+
+08:37:43.853 [info]  Nov  2 08:37:43 chat[310]: ATQ0^M^M
+
+08:37:43.853 [info]  Nov  2 08:37:43 chat[310]: OK
+
+08:37:43.853 [info]  Nov  2 08:37:43 chat[310]:  -- got it
+
+
+08:37:43.854 [info]  Nov  2 08:37:43 chat[310]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:37:44.085 [info]  Nov  2 08:37:44 chat[310]: expect (OK)
+
+08:37:44.085 [info]  Nov  2 08:37:44 chat[310]: ^M
+
+08:37:44.104 [info]  Nov  2 08:37:44 chat[310]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:37:44.104 [info]  Nov  2 08:37:44 chat[310]: OK
+
+08:37:44.104 [info]  Nov  2 08:37:44 chat[310]:  -- got it
+
+
+08:37:44.104 [info]  Nov  2 08:37:44 chat[310]: send (AT+QCFG="nwscanseq",02^M)
+
+08:37:44.336 [info]  Nov  2 08:37:44 chat[310]: expect (OK)
+
+08:37:44.336 [info]  Nov  2 08:37:44 chat[310]: ^M
+
+08:37:44.343 [info]  Nov  2 08:37:44 chat[310]: AT+QCFG="nwscanseq",02^M^M
+
+08:37:44.343 [info]  Nov  2 08:37:44 chat[310]: OK
+
+08:37:44.344 [info]  Nov  2 08:37:44 chat[310]:  -- got it
+
+
+08:37:44.344 [info]  Nov  2 08:37:44 chat[310]: send (AT+QCFG="nwscanmode",3^M)
+
+08:37:44.576 [info]  Nov  2 08:37:44 chat[310]: expect (OK)
+
+08:37:44.576 [info]  Nov  2 08:37:44 chat[310]: ^M
+
+08:37:44.578 [info]  Nov  2 08:37:44 chat[310]: AT+QCFG="nwscanmode",3^M^M
+
+08:37:44.578 [info]  Nov  2 08:37:44 chat[310]: OK
+
+08:37:44.578 [info]  Nov  2 08:37:44 chat[310]:  -- got it
+
+
+08:37:44.578 [info]  Nov  2 08:37:44 chat[310]: send (AT+QCFG="iotopmode",0^M)
+
+08:37:44.798 [info]  Nov  2 08:37:44 chat[310]: expect (OK)
+
+08:37:44.799 [info]  Nov  2 08:37:44 chat[310]: ^M
+
+08:37:44.801 [info]  Nov  2 08:37:44 chat[310]: AT+QCFG="iotopmode",0^M^M
+
+08:37:44.801 [info]  Nov  2 08:37:44 chat[310]: OK
+
+08:37:44.801 [info]  Nov  2 08:37:44 chat[310]:  -- got it
+
+
+08:37:44.801 [info]  Nov  2 08:37:44 chat[310]: send (ATDT*99***1#^M)
+
+08:37:44.930 [info]  Nov  2 08:37:44 chat[310]: expect (CONNECT)
+
+08:37:44.931 [info]  Nov  2 08:37:44 chat[310]: ^M
+
+08:37:44.933 [info]  Nov  2 08:37:44 chat[310]: ATDT*99***1#^M^M
+
+08:37:44.933 [info]  Nov  2 08:37:44 chat[310]: CONNECT
+
+08:37:44.933 [info]  Nov  2 08:37:44 chat[310]:  -- got it
+
+
+08:37:44.933 [info]  Nov  2 08:37:44 chat[310]: send (^M)
+
+08:37:44.944 [debug] Nov  2 08:37:44 pppd[248]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 310), status = 0x0
+
+08:37:44.944 [info]  Nov  2 08:37:44 pppd[248]: Serial connection established.
+
+08:37:44.947 [debug] Nov  2 08:37:44 pppd[248]: using channel 2
+
+08:37:44.947 [info]  Nov  2 08:37:44 pppd[248]: Using interface ppp0
+
+08:37:44.947 [info]  Nov  2 08:37:44 pppd[248]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:37:45.947 [debug] Nov  2 08:37:45 pppd[248]: sent [LCP ConfReq id=0x2 <asyncmap 0x0> <magic 0xd999cce1> <pcomp> <accomp>]
+
+08:37:45.948 [debug] Nov  2 08:37:45 pppd[248]: rcvd [LCP ConfReq id=0x5 <asyncmap 0x0> <auth chap MD5> <magic 0xc7a67f4d> <pcomp> <accomp>]
+
+08:37:45.949 [debug] Nov  2 08:37:45 pppd[248]: No auth is possible
+
+08:37:45.949 [debug] Nov  2 08:37:45 pppd[248]: sent [LCP ConfRej id=0x5 <auth chap MD5>]
+
+08:37:45.949 [debug] Nov  2 08:37:45 pppd[248]: rcvd [LCP ConfAck id=0x2 <asyncmap 0x0> <magic 0xd999cce1> <pcomp> <accomp>]
+
+08:37:45.949 [debug] Nov  2 08:37:45 pppd[248]: rcvd [LCP ConfReq id=0x6 <asyncmap 0x0> <magic 0xc7a67f4d> <pcomp> <accomp>]
+
+08:37:45.949 [debug] Nov  2 08:37:45 pppd[248]: sent [LCP ConfAck id=0x6 <asyncmap 0x0> <magic 0xc7a67f4d> <pcomp> <accomp>]
+
+08:37:45.950 [debug] Nov  2 08:37:45 pppd[248]: sent [CCP ConfReq id=0x2 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:37:45.950 [debug] Nov  2 08:37:45 pppd[248]: sent [IPCP ConfReq id=0x4 <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:37:45.950 [debug] Nov  2 08:37:45 pppd[248]: rcvd [LCP DiscReq id=0x7 magic=0xc7a67f4d]
+
+08:37:45.950 [debug] Nov  2 08:37:45 pppd[248]: rcvd [LCP ProtRej id=0x8 80 fd 01 02 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:37:45.950 [debug] Nov  2 08:37:45 pppd[248]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:37:45.966 [debug] Nov  2 08:37:45 pppd[248]: rcvd [IPCP ConfReq id=0x2]
+
+08:37:45.966 [debug] Nov  2 08:37:45 pppd[248]: sent [IPCP ConfNak id=0x2 <addr 0.0.0.0>]
+
+08:37:45.967 [debug] Nov  2 08:37:45 pppd[248]: rcvd [IPCP ConfRej id=0x4 <compress VJ 0f 01>]
+
+08:37:45.967 [debug] Nov  2 08:37:45 pppd[248]: sent [IPCP ConfReq id=0x5 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:37:45.967 [debug] Nov  2 08:37:45 pppd[248]: rcvd [IPCP ConfReq id=0x3]
+
+08:37:45.967 [debug] Nov  2 08:37:45 pppd[248]: sent [IPCP ConfAck id=0x3]
+
+08:37:45.967 [debug] Nov  2 08:37:45 pppd[248]: rcvd [IPCP ConfNak id=0x5 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:37:45.968 [debug] Nov  2 08:37:45 pppd[248]: sent [IPCP ConfReq id=0x6 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:37:45.968 [debug] Nov  2 08:37:45 pppd[248]: rcvd [IPCP ConfAck id=0x6 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:37:45.968 [warn]  Nov  2 08:37:45 pppd[248]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:37:45.970 [debug] Nov  2 08:37:45 pppd[248]: Script /etc/ppp/ip-pre-up started (pid 311)
+
+08:37:45.973 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:37:45.973 [debug] Nov  2 08:37:45 pppd[248]: Script /etc/ppp/ip-pre-up finished (pid 311), status = 0x0
+
+08:37:45.974 [info]  Nov  2 08:37:45 pppd[248]: local  IP address 100.85.118.2
+
+08:37:45.974 [info]  Nov  2 08:37:45 pppd[248]: remote IP address 10.64.64.64
+
+08:37:45.974 [info]  Nov  2 08:37:45 pppd[248]: primary   DNS address 8.8.8.8
+
+08:37:45.974 [info]  Nov  2 08:37:45 pppd[248]: secondary DNS address 8.8.4.4
+
+08:37:45.975 [debug] Nov  2 08:37:45 pppd[248]: Script /etc/ppp/ip-up started (pid 312)
+
+08:37:45.979 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:37:45.979 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:37:45.979 [debug] Nov  2 08:37:45 pppd[248]: Script /etc/ppp/ip-up finished (pid 312), status = 0x0
+
+08:38:06.024 [warn]  Send "AT+QSPN" failed: {:error, "ERROR"}. Ignoring...
+iex(3)>
+nil
+
+08:38:18.727 [debug] Nov  2 08:38:18 pppd[248]: rcvd [LCP TermReq id=0x9]
+
+08:38:18.728 [info]  Nov  2 08:38:18 pppd[248]: LCP terminated by peer
+
+08:38:18.728 [info]  Nov  2 08:38:18 pppd[248]: Connect time 0.6 minutes.
+
+08:38:18.728 [info]  Nov  2 08:38:18 pppd[248]: Sent 0 bytes, received 0 bytes.
+
+08:38:18.730 [debug] Nov  2 08:38:18 pppd[248]: Script /etc/ppp/ip-down started (pid 319)
+
+08:38:18.731 [debug] Nov  2 08:38:18 pppd[248]: sent [LCP TermAck id=0x9]
+
+08:38:18.733 [debug] Nov  2 08:38:18 pppd[248]: Script /etc/ppp/ip-down finished (pid 319), status = 0x0
+
+08:38:18.734 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "33", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:38:18.734 [info]  RouteManager: clear_route ppp0
+
+08:38:18.735 [info]  Nov  2 08:38:18 pppd[248]: Modem hangup
+
+08:38:18.735 [info]  Nov  2 08:38:18 pppd[248]: Connection terminated.
+
+08:38:18.775 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:38:18.808 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:38:18.840 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:38:18.873 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+iex(4)> ifconfig
+lo: flags=[:up, :loopback, :running]
+    inet 127.0.0.1  netmask 255.0.0.0
+    inet ::1  netmask ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+    hwaddr 00:00:00:00:00:00
+
+eth0: flags=[:broadcast, :multicast]
+    hwaddr dc:a6:32:c5:b7:87
+
+wwan0: flags=[:broadcast, :multicast]
+    hwaddr 76:19:75:3f:58:c5
+
+wlan0: flags=[:up, :broadcast, :running, :multicast]
+    inet 192.168.0.120  netmask 255.255.255.0  broadcast 192.168.0.255
+    inet fe80::dea6:32ff:fec5:b788  netmask ffff:ffff:ffff:ffff::
+    hwaddr dc:a6:32:c5:b7:88
+
+iex(5)> VintageNet.In
+Info                    Interface               InterfaceRenamer
+InterfacesMonitor       InterfacesSupervisor
+iex(5)> VintageNet.Info.info
+VintageNet 0.9.2
+
+All interfaces:       ["eth0", "lo", "wlan0", "wwan0"]
+Available interfaces: ["wlan0"]
+
+Interface ppp0
+  Type: VintageNetMobile
+  Present: false
+  Configuration:
+    %{
+      type: VintageNetMobile,
+      vintage_net_mobile: %{
+        modem: VintageNetMobile.Modem.QuectelBG96,
+        scan: [:lte_cat_m1],
+        service_providers: [%{apn: "wm"}]
+      }
+    }
+
+Interface wlan0
+  Type: VintageNetWiFi
+  Present: true
+  State: :configured (0:01:58)
+  Connection: :internet (0:01:20)
+  Addresses: 192.168.0.120/24, fe80::dea6:32ff:fec5:b788/64
+  Configuration:
+    %{
+      ipv4: %{method: :dhcp},
+      type: VintageNetWiFi,
+      vintage_net_wifi: %{
+        networks: [
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."},
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."}
+        ]
+      }
+    }
+
+:ok
+
+08:38:50.816 [info]  Nov  2 08:38:50 chat[333]: abort on (BUSY)
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: abort on (NO CARRIER)
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: abort on (NO DIALTONE)
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: abort on (NO DIAL TONE)
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: abort on (NO ANSWER)
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: abort on (DELAYED)
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: timeout set to 10 seconds
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: report (CONNECT)
+
+08:38:50.817 [info]  Nov  2 08:38:50 chat[333]: send (+++^M)
+
+08:38:50.857 [info]  Nov  2 08:38:50 chat[333]: send (AT^M)
+
+08:38:50.887 [info]  Nov  2 08:38:50 chat[333]: expect (OK)
+
+08:38:50.888 [info]  Nov  2 08:38:50 chat[333]: AT^M^M
+
+08:38:50.888 [info]  Nov  2 08:38:50 chat[333]: OK
+
+08:38:50.888 [info]  Nov  2 08:38:50 chat[333]:  -- got it
+
+
+08:38:50.889 [info]  Nov  2 08:38:50 chat[333]: send (ATH^M)
+
+08:38:50.929 [info]  Nov  2 08:38:50 chat[333]: expect (OK)
+
+08:38:50.929 [info]  Nov  2 08:38:50 chat[333]: ^M
+
+08:38:50.931 [info]  Nov  2 08:38:50 chat[333]: ATH^M^M
+
+08:38:50.931 [info]  Nov  2 08:38:50 chat[333]: OK
+
+08:38:50.931 [info]  Nov  2 08:38:50 chat[333]:  -- got it
+
+
+08:38:50.931 [info]  Nov  2 08:38:50 chat[333]: send (ATZ^M)
+
+08:38:50.970 [info]  Nov  2 08:38:50 chat[333]: expect (OK)
+
+08:38:50.970 [info]  Nov  2 08:38:50 chat[333]: ^M
+
+08:38:50.972 [info]  Nov  2 08:38:50 chat[333]: ATZ^M^M
+
+08:38:50.972 [info]  Nov  2 08:38:50 chat[333]: OK
+
+08:38:50.972 [info]  Nov  2 08:38:50 chat[333]:  -- got it
+
+
+08:38:50.972 [info]  Nov  2 08:38:50 chat[333]: send (ATQ0^M)
+
+08:38:51.022 [info]  Nov  2 08:38:51 chat[333]: expect (OK)
+
+08:38:51.022 [info]  Nov  2 08:38:51 chat[333]: ^M
+
+08:38:51.025 [info]  Nov  2 08:38:51 chat[333]: ATQ0^M^M
+
+08:38:51.025 [info]  Nov  2 08:38:51 chat[333]: OK
+
+08:38:51.025 [info]  Nov  2 08:38:51 chat[333]:  -- got it
+
+
+08:38:51.025 [info]  Nov  2 08:38:51 chat[333]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:38:51.255 [info]  Nov  2 08:38:51 chat[333]: expect (OK)
+
+08:38:51.255 [info]  Nov  2 08:38:51 chat[333]: ^M
+
+08:38:51.273 [info]  Nov  2 08:38:51 chat[333]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:38:51.273 [info]  Nov  2 08:38:51 chat[333]: OK
+
+08:38:51.274 [info]  Nov  2 08:38:51 chat[333]:  -- got it
+
+
+08:38:51.274 [info]  Nov  2 08:38:51 chat[333]: send (AT+QCFG="nwscanseq",02^M)
+
+08:38:51.506 [info]  Nov  2 08:38:51 chat[333]: expect (OK)
+
+08:38:51.506 [info]  Nov  2 08:38:51 chat[333]: ^M
+
+08:38:51.512 [info]  Nov  2 08:38:51 chat[333]: AT+QCFG="nwscanseq",02^M^M
+
+08:38:51.512 [info]  Nov  2 08:38:51 chat[333]: OK
+
+08:38:51.512 [info]  Nov  2 08:38:51 chat[333]:  -- got it
+
+
+08:38:51.515 [info]  Nov  2 08:38:51 chat[333]: send (AT+QCFG="nwscanmode",3^M)
+
+08:38:51.744 [info]  Nov  2 08:38:51 chat[333]: expect (OK)
+
+08:38:51.744 [info]  Nov  2 08:38:51 chat[333]: ^M
+
+08:38:51.747 [info]  Nov  2 08:38:51 chat[333]: AT+QCFG="nwscanmode",3^M^M
+
+08:38:51.747 [info]  Nov  2 08:38:51 chat[333]: OK
+
+08:38:51.747 [info]  Nov  2 08:38:51 chat[333]:  -- got it
+
+
+08:38:51.747 [info]  Nov  2 08:38:51 chat[333]: send (AT+QCFG="iotopmode",0^M)
+
+08:38:51.967 [info]  Nov  2 08:38:51 chat[333]: expect (OK)
+
+08:38:51.967 [info]  Nov  2 08:38:51 chat[333]: ^M
+
+08:38:51.970 [info]  Nov  2 08:38:51 chat[333]: AT+QCFG="iotopmode",0^M^M
+
+08:38:51.970 [info]  Nov  2 08:38:51 chat[333]: OK
+
+08:38:51.970 [info]  Nov  2 08:38:51 chat[333]:  -- got it
+
+
+08:38:51.970 [info]  Nov  2 08:38:51 chat[333]: send (ATDT*99***1#^M)
+
+08:38:52.099 [info]  Nov  2 08:38:52 chat[333]: expect (CONNECT)
+
+08:38:52.099 [info]  Nov  2 08:38:52 chat[333]: ^M
+
+08:38:52.102 [info]  Nov  2 08:38:52 chat[333]: ATDT*99***1#^M^M
+
+08:38:52.104 [info]  Nov  2 08:38:52 chat[333]: CONNECT
+
+08:38:52.104 [info]  Nov  2 08:38:52 chat[333]:  -- got it
+
+
+08:38:52.104 [info]  Nov  2 08:38:52 chat[333]: send (^M)
+
+08:38:52.113 [debug] Nov  2 08:38:52 pppd[248]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 333), status = 0x0
+
+08:38:52.113 [info]  Nov  2 08:38:52 pppd[248]: Serial connection established.
+
+08:38:52.115 [debug] Nov  2 08:38:52 pppd[248]: using channel 3
+
+08:38:52.115 [info]  Nov  2 08:38:52 pppd[248]: Using interface ppp0
+
+08:38:52.115 [info]  Nov  2 08:38:52 pppd[248]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:38:53.116 [debug] Nov  2 08:38:53 pppd[248]: sent [LCP ConfReq id=0x3 <asyncmap 0x0> <magic 0xc95ab9fe> <pcomp> <accomp>]
+
+08:38:53.118 [debug] Nov  2 08:38:53 pppd[248]: rcvd [LCP ConfReq id=0xa <asyncmap 0x0> <auth chap MD5> <magic 0xc7a78469> <pcomp> <accomp>]
+
+08:38:53.118 [debug] Nov  2 08:38:53 pppd[248]: No auth is possible
+
+08:38:53.118 [debug] Nov  2 08:38:53 pppd[248]: sent [LCP ConfRej id=0xa <auth chap MD5>]
+
+08:38:53.118 [debug] Nov  2 08:38:53 pppd[248]: rcvd [LCP ConfAck id=0x3 <asyncmap 0x0> <magic 0xc95ab9fe> <pcomp> <accomp>]
+
+08:38:53.119 [debug] Nov  2 08:38:53 pppd[248]: rcvd [LCP ConfReq id=0xb <asyncmap 0x0> <magic 0xc7a78469> <pcomp> <accomp>]
+
+08:38:53.119 [debug] Nov  2 08:38:53 pppd[248]: sent [LCP ConfAck id=0xb <asyncmap 0x0> <magic 0xc7a78469> <pcomp> <accomp>]
+
+08:38:53.119 [debug] Nov  2 08:38:53 pppd[248]: sent [CCP ConfReq id=0x3 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:38:53.119 [debug] Nov  2 08:38:53 pppd[248]: sent [IPCP ConfReq id=0x7 <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:38:53.119 [debug] Nov  2 08:38:53 pppd[248]: rcvd [LCP DiscReq id=0xc magic=0xc7a78469]
+
+08:38:53.119 [debug] Nov  2 08:38:53 pppd[248]: rcvd [LCP ProtRej id=0xd 80 fd 01 03 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:38:53.119 [debug] Nov  2 08:38:53 pppd[248]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:38:53.135 [debug] Nov  2 08:38:53 pppd[248]: rcvd [IPCP ConfReq id=0x4]
+
+08:38:53.135 [debug] Nov  2 08:38:53 pppd[248]: sent [IPCP ConfNak id=0x4 <addr 0.0.0.0>]
+
+08:38:53.135 [debug] Nov  2 08:38:53 pppd[248]: rcvd [IPCP ConfRej id=0x7 <compress VJ 0f 01>]
+
+08:38:53.135 [debug] Nov  2 08:38:53 pppd[248]: sent [IPCP ConfReq id=0x8 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:38:53.136 [debug] Nov  2 08:38:53 pppd[248]: rcvd [IPCP ConfReq id=0x5]
+
+08:38:53.136 [debug] Nov  2 08:38:53 pppd[248]: sent [IPCP ConfAck id=0x5]
+
+08:38:53.136 [debug] Nov  2 08:38:53 pppd[248]: rcvd [IPCP ConfNak id=0x8 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:38:53.136 [debug] Nov  2 08:38:53 pppd[248]: sent [IPCP ConfReq id=0x9 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:38:53.136 [debug] Nov  2 08:38:53 pppd[248]: rcvd [IPCP ConfAck id=0x9 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:38:53.136 [warn]  Nov  2 08:38:53 pppd[248]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:38:53.139 [debug] Nov  2 08:38:53 pppd[248]: Script /etc/ppp/ip-pre-up started (pid 334)
+
+08:38:53.142 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:38:53.143 [debug] Nov  2 08:38:53 pppd[248]: Script /etc/ppp/ip-pre-up finished (pid 334), status = 0x0
+
+08:38:53.143 [info]  Nov  2 08:38:53 pppd[248]: local  IP address 100.85.118.2
+
+08:38:53.143 [info]  Nov  2 08:38:53 pppd[248]: remote IP address 10.64.64.64
+
+08:38:53.143 [info]  Nov  2 08:38:53 pppd[248]: primary   DNS address 8.8.8.8
+
+08:38:53.144 [info]  Nov  2 08:38:53 pppd[248]: secondary DNS address 8.8.4.4
+
+08:38:53.146 [debug] Nov  2 08:38:53 pppd[248]: Script /etc/ppp/ip-up started (pid 335)
+
+08:38:53.148 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:38:53.148 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:38:53.149 [debug] Nov  2 08:38:53 pppd[248]: Script /etc/ppp/ip-up finished (pid 335), status = 0x0
+
+08:39:27.860 [debug] Nov  2 08:39:27 pppd[248]: rcvd [LCP TermReq id=0xe]
+
+08:39:27.861 [info]  Nov  2 08:39:27 pppd[248]: LCP terminated by peer
+
+08:39:27.861 [info]  Nov  2 08:39:27 pppd[248]: Connect time 0.6 minutes.
+
+08:39:27.861 [info]  Nov  2 08:39:27 pppd[248]: Sent 0 bytes, received 0 bytes.
+
+08:39:27.863 [debug] Nov  2 08:39:27 pppd[248]: Script /etc/ppp/ip-down started (pid 342)
+
+08:39:27.863 [debug] Nov  2 08:39:27 pppd[248]: sent [LCP TermAck id=0xe]
+
+08:39:27.867 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "34", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:39:27.867 [info]  RouteManager: clear_route ppp0
+
+08:39:27.868 [debug] Nov  2 08:39:27 pppd[248]: Script /etc/ppp/ip-down finished (pid 342), status = 0x0
+
+08:39:27.868 [info]  Nov  2 08:39:27 pppd[248]: Modem hangup
+
+08:39:27.868 [info]  Nov  2 08:39:27 pppd[248]: Connection terminated.
+
+08:39:27.908 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:39:27.941 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:39:27.973 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:39:28.005 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:39:47.491 [debug] wpa_supplicant: CTRL_IFACE: Detach monitor that cannot receive messages: /tmp/vintage_net/wpa_supplicant/wlan0.ex\x00
+
+08:39:59.950 [info]  Nov  2 08:39:59 chat[356]: abort on (BUSY)
+
+08:39:59.950 [info]  Nov  2 08:39:59 chat[356]: abort on (NO CARRIER)
+
+08:39:59.950 [info]  Nov  2 08:39:59 chat[356]: abort on (NO DIALTONE)
+
+08:39:59.951 [info]  Nov  2 08:39:59 chat[356]: abort on (NO DIAL TONE)
+
+08:39:59.951 [info]  Nov  2 08:39:59 chat[356]: abort on (NO ANSWER)
+
+08:39:59.951 [info]  Nov  2 08:39:59 chat[356]: abort on (DELAYED)
+
+08:39:59.951 [info]  Nov  2 08:39:59 chat[356]: timeout set to 10 seconds
+
+08:39:59.951 [info]  Nov  2 08:39:59 chat[356]: report (CONNECT)
+
+08:39:59.951 [info]  Nov  2 08:39:59 chat[356]: send (+++^M)
+
+08:39:59.990 [info]  Nov  2 08:39:59 chat[356]: send (AT^M)
+
+08:40:00.021 [info]  Nov  2 08:40:00 chat[356]: expect (OK)
+
+08:40:00.022 [info]  Nov  2 08:40:00 chat[356]: AT^M^M
+
+08:40:00.022 [info]  Nov  2 08:40:00 chat[356]: OK
+
+08:40:00.022 [info]  Nov  2 08:40:00 chat[356]:  -- got it
+
+
+08:40:00.023 [info]  Nov  2 08:40:00 chat[356]: send (ATH^M)
+
+08:40:00.062 [info]  Nov  2 08:40:00 chat[356]: expect (OK)
+
+08:40:00.062 [info]  Nov  2 08:40:00 chat[356]: ^M
+
+08:40:00.063 [info]  Nov  2 08:40:00 chat[356]: ATH^M^M
+
+08:40:00.063 [info]  Nov  2 08:40:00 chat[356]: OK
+
+08:40:00.063 [info]  Nov  2 08:40:00 chat[356]:  -- got it
+
+
+08:40:00.063 [info]  Nov  2 08:40:00 chat[356]: send (ATZ^M)
+
+08:40:00.103 [info]  Nov  2 08:40:00 chat[356]: expect (OK)
+
+08:40:00.103 [info]  Nov  2 08:40:00 chat[356]: ^M
+
+08:40:00.105 [info]  Nov  2 08:40:00 chat[356]: ATZ^M^M
+
+08:40:00.105 [info]  Nov  2 08:40:00 chat[356]: OK
+
+08:40:00.105 [info]  Nov  2 08:40:00 chat[356]:  -- got it
+
+
+08:40:00.106 [info]  Nov  2 08:40:00 chat[356]: send (ATQ0^M)
+
+08:40:00.156 [info]  Nov  2 08:40:00 chat[356]: expect (OK)
+
+08:40:00.156 [info]  Nov  2 08:40:00 chat[356]: ^M
+
+08:40:00.159 [info]  Nov  2 08:40:00 chat[356]: ATQ0^M^M
+
+08:40:00.159 [info]  Nov  2 08:40:00 chat[356]: OK
+
+08:40:00.159 [info]  Nov  2 08:40:00 chat[356]:  -- got it
+
+
+08:40:00.159 [info]  Nov  2 08:40:00 chat[356]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:40:00.389 [info]  Nov  2 08:40:00 chat[356]: expect (OK)
+
+08:40:00.389 [info]  Nov  2 08:40:00 chat[356]: ^M
+
+08:40:00.407 [info]  Nov  2 08:40:00 chat[356]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:40:00.407 [info]  Nov  2 08:40:00 chat[356]: OK
+
+08:40:00.407 [info]  Nov  2 08:40:00 chat[356]:  -- got it
+
+
+08:40:00.407 [info]  Nov  2 08:40:00 chat[356]: send (AT+QCFG="nwscanseq",02^M)
+
+08:40:00.639 [info]  Nov  2 08:40:00 chat[356]: expect (OK)
+
+08:40:00.640 [info]  Nov  2 08:40:00 chat[356]: ^M
+
+08:40:00.646 [info]  Nov  2 08:40:00 chat[356]: AT+QCFG="nwscanseq",02^M^M
+
+08:40:00.646 [info]  Nov  2 08:40:00 chat[356]: OK
+
+08:40:00.646 [info]  Nov  2 08:40:00 chat[356]:  -- got it
+
+
+08:40:00.649 [info]  Nov  2 08:40:00 chat[356]: send (AT+QCFG="nwscanmode",3^M)
+
+08:40:00.879 [info]  Nov  2 08:40:00 chat[356]: expect (OK)
+
+08:40:00.879 [info]  Nov  2 08:40:00 chat[356]: ^M
+
+08:40:00.881 [info]  Nov  2 08:40:00 chat[356]: AT+QCFG="nwscanmode",3^M^M
+
+08:40:00.881 [info]  Nov  2 08:40:00 chat[356]: OK
+
+08:40:00.881 [info]  Nov  2 08:40:00 chat[356]:  -- got it
+
+
+08:40:00.881 [info]  Nov  2 08:40:00 chat[356]: send (AT+QCFG="iotopmode",0^M)
+
+08:40:01.102 [info]  Nov  2 08:40:01 chat[356]: expect (OK)
+
+08:40:01.102 [info]  Nov  2 08:40:01 chat[356]: ^M
+
+08:40:01.103 [info]  Nov  2 08:40:01 chat[356]: AT+QCFG="iotopmode",0^M^M
+
+08:40:01.103 [info]  Nov  2 08:40:01 chat[356]: OK
+
+08:40:01.103 [info]  Nov  2 08:40:01 chat[356]:  -- got it
+
+
+08:40:01.104 [info]  Nov  2 08:40:01 chat[356]: send (ATDT*99***1#^M)
+
+08:40:01.234 [info]  Nov  2 08:40:01 chat[356]: expect (CONNECT)
+
+08:40:01.234 [info]  Nov  2 08:40:01 chat[356]: ^M
+
+08:40:01.237 [info]  Nov  2 08:40:01 chat[356]: ATDT*99***1#^M^M
+
+08:40:01.237 [info]  Nov  2 08:40:01 chat[356]: CONNECT
+
+08:40:01.237 [info]  Nov  2 08:40:01 chat[356]:  -- got it
+
+
+08:40:01.237 [info]  Nov  2 08:40:01 chat[356]: send (^M)
+
+08:40:01.247 [debug] Nov  2 08:40:01 pppd[248]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 356), status = 0x0
+
+08:40:01.248 [info]  Nov  2 08:40:01 pppd[248]: Serial connection established.
+
+08:40:01.248 [debug] Nov  2 08:40:01 pppd[248]: using channel 4
+
+08:40:01.249 [info]  Nov  2 08:40:01 pppd[248]: Using interface ppp0
+
+08:40:01.249 [info]  Nov  2 08:40:01 pppd[248]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:40:02.250 [debug] Nov  2 08:40:02 pppd[248]: sent [LCP ConfReq id=0x4 <asyncmap 0x0> <magic 0x3dc6d14d> <pcomp> <accomp>]
+
+08:40:02.252 [debug] Nov  2 08:40:02 pppd[248]: rcvd [LCP ConfReq id=0xf <asyncmap 0x0> <auth chap MD5> <magic 0xc7a891b3> <pcomp> <accomp>]
+
+08:40:02.252 [debug] Nov  2 08:40:02 pppd[248]: No auth is possible
+
+08:40:02.252 [debug] Nov  2 08:40:02 pppd[248]: sent [LCP ConfRej id=0xf <auth chap MD5>]
+
+08:40:02.252 [debug] Nov  2 08:40:02 pppd[248]: rcvd [LCP ConfAck id=0x4 <asyncmap 0x0> <magic 0x3dc6d14d> <pcomp> <accomp>]
+
+08:40:02.252 [debug] Nov  2 08:40:02 pppd[248]: rcvd [LCP ConfReq id=0x10 <asyncmap 0x0> <magic 0xc7a891b3> <pcomp> <accomp>]
+
+08:40:02.252 [debug] Nov  2 08:40:02 pppd[248]: sent [LCP ConfAck id=0x10 <asyncmap 0x0> <magic 0xc7a891b3> <pcomp> <accomp>]
+
+08:40:02.253 [debug] Nov  2 08:40:02 pppd[248]: sent [CCP ConfReq id=0x4 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:40:02.253 [debug] Nov  2 08:40:02 pppd[248]: sent [IPCP ConfReq id=0xa <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:40:02.253 [debug] Nov  2 08:40:02 pppd[248]: rcvd [LCP DiscReq id=0x11 magic=0xc7a891b3]
+
+08:40:02.253 [debug] Nov  2 08:40:02 pppd[248]: rcvd [LCP ProtRej id=0x12 80 fd 01 04 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:40:02.253 [debug] Nov  2 08:40:02 pppd[248]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:40:02.269 [debug] Nov  2 08:40:02 pppd[248]: rcvd [IPCP ConfReq id=0x6]
+
+08:40:02.269 [debug] Nov  2 08:40:02 pppd[248]: sent [IPCP ConfNak id=0x6 <addr 0.0.0.0>]
+
+08:40:02.269 [debug] Nov  2 08:40:02 pppd[248]: rcvd [IPCP ConfRej id=0xa <compress VJ 0f 01>]
+
+08:40:02.269 [debug] Nov  2 08:40:02 pppd[248]: sent [IPCP ConfReq id=0xb <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:40:02.269 [debug] Nov  2 08:40:02 pppd[248]: rcvd [IPCP ConfReq id=0x7]
+
+08:40:02.270 [debug] Nov  2 08:40:02 pppd[248]: sent [IPCP ConfAck id=0x7]
+
+08:40:02.270 [debug] Nov  2 08:40:02 pppd[248]: rcvd [IPCP ConfNak id=0xb <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:40:02.270 [debug] Nov  2 08:40:02 pppd[248]: sent [IPCP ConfReq id=0xc <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:40:02.270 [debug] Nov  2 08:40:02 pppd[248]: rcvd [IPCP ConfAck id=0xc <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:40:02.270 [warn]  Nov  2 08:40:02 pppd[248]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:40:02.273 [debug] Nov  2 08:40:02 pppd[248]: Script /etc/ppp/ip-pre-up started (pid 357)
+
+08:40:02.276 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:40:02.276 [debug] Nov  2 08:40:02 pppd[248]: Script /etc/ppp/ip-pre-up finished (pid 357), status = 0x0
+
+08:40:02.277 [info]  Nov  2 08:40:02 pppd[248]: local  IP address 100.85.118.2
+
+08:40:02.277 [info]  Nov  2 08:40:02 pppd[248]: remote IP address 10.64.64.64
+
+08:40:02.277 [info]  Nov  2 08:40:02 pppd[248]: primary   DNS address 8.8.8.8
+
+08:40:02.277 [info]  Nov  2 08:40:02 pppd[248]: secondary DNS address 8.8.4.4
+
+08:40:02.278 [debug] Nov  2 08:40:02 pppd[248]: Script /etc/ppp/ip-up started (pid 358)
+
+08:40:02.282 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:40:02.282 [debug] Nov  2 08:40:02 pppd[248]: Script /etc/ppp/ip-up finished (pid 358), status = 0x0
+
+08:40:02.282 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:40:36.028 [warn]  Send "AT+QSPN" failed: {:error, "ERROR"}. Ignoring...
+
+08:40:37.130 [debug] Nov  2 08:40:37 pppd[248]: rcvd [LCP TermReq id=0x13]
+
+08:40:37.131 [info]  Nov  2 08:40:37 pppd[248]: LCP terminated by peer
+
+08:40:37.131 [info]  Nov  2 08:40:37 pppd[248]: Connect time 0.6 minutes.
+
+08:40:37.131 [info]  Nov  2 08:40:37 pppd[248]: Sent 0 bytes, received 0 bytes.
+
+08:40:37.133 [debug] Nov  2 08:40:37 pppd[248]: Script /etc/ppp/ip-down started (pid 365)
+
+08:40:37.134 [debug] Nov  2 08:40:37 pppd[248]: sent [LCP TermAck id=0x13]
+
+08:40:37.136 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "35", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:40:37.137 [info]  RouteManager: clear_route ppp0
+
+08:40:37.137 [debug] Nov  2 08:40:37 pppd[248]: Script /etc/ppp/ip-down finished (pid 365), status = 0x0
+
+08:40:37.137 [info]  Nov  2 08:40:37 pppd[248]: Modem hangup
+
+08:40:37.137 [info]  Nov  2 08:40:37 pppd[248]: Connection terminated.
+
+08:40:37.177 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:40:37.209 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:40:37.241 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:40:37.273 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:41:09.243 [info]  Nov  2 08:41:09 chat[379]: abort on (BUSY)
+
+08:41:09.243 [info]  Nov  2 08:41:09 chat[379]: abort on (NO CARRIER)
+
+08:41:09.243 [info]  Nov  2 08:41:09 chat[379]: abort on (NO DIALTONE)
+
+08:41:09.244 [info]  Nov  2 08:41:09 chat[379]: abort on (NO DIAL TONE)
+
+08:41:09.244 [info]  Nov  2 08:41:09 chat[379]: abort on (NO ANSWER)
+
+08:41:09.244 [info]  Nov  2 08:41:09 chat[379]: abort on (DELAYED)
+
+08:41:09.244 [info]  Nov  2 08:41:09 chat[379]: timeout set to 10 seconds
+
+08:41:09.244 [info]  Nov  2 08:41:09 chat[379]: report (CONNECT)
+
+08:41:09.244 [info]  Nov  2 08:41:09 chat[379]: send (+++^M)
+
+08:41:09.284 [info]  Nov  2 08:41:09 chat[379]: send (AT^M)
+
+08:41:09.314 [info]  Nov  2 08:41:09 chat[379]: expect (OK)
+
+08:41:09.316 [info]  Nov  2 08:41:09 chat[379]: AT^M^M
+
+08:41:09.316 [info]  Nov  2 08:41:09 chat[379]: OK
+
+08:41:09.316 [info]  Nov  2 08:41:09 chat[379]:  -- got it
+
+
+08:41:09.316 [info]  Nov  2 08:41:09 chat[379]: send (ATH^M)
+
+08:41:09.355 [info]  Nov  2 08:41:09 chat[379]: expect (OK)
+
+08:41:09.355 [info]  Nov  2 08:41:09 chat[379]: ^M
+
+08:41:09.358 [info]  Nov  2 08:41:09 chat[379]: ATH^M^M
+
+08:41:09.358 [info]  Nov  2 08:41:09 chat[379]: OK
+
+08:41:09.358 [info]  Nov  2 08:41:09 chat[379]:  -- got it
+
+
+08:41:09.358 [info]  Nov  2 08:41:09 chat[379]: send (ATZ^M)
+
+08:41:09.396 [info]  Nov  2 08:41:09 chat[379]: expect (OK)
+
+08:41:09.397 [info]  Nov  2 08:41:09 chat[379]: ^M
+
+08:41:09.399 [info]  Nov  2 08:41:09 chat[379]: ATZ^M^M
+
+08:41:09.399 [info]  Nov  2 08:41:09 chat[379]: OK
+
+08:41:09.399 [info]  Nov  2 08:41:09 chat[379]:  -- got it
+
+
+08:41:09.399 [info]  Nov  2 08:41:09 chat[379]: send (ATQ0^M)
+
+08:41:09.449 [info]  Nov  2 08:41:09 chat[379]: expect (OK)
+
+08:41:09.449 [info]  Nov  2 08:41:09 chat[379]: ^M
+
+08:41:09.451 [info]  Nov  2 08:41:09 chat[379]: ATQ0^M^M
+
+08:41:09.451 [info]  Nov  2 08:41:09 chat[379]: OK
+
+08:41:09.452 [info]  Nov  2 08:41:09 chat[379]:  -- got it
+
+
+08:41:09.452 [info]  Nov  2 08:41:09 chat[379]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:41:09.682 [info]  Nov  2 08:41:09 chat[379]: expect (OK)
+
+08:41:09.682 [info]  Nov  2 08:41:09 chat[379]: ^M
+
+08:41:09.700 [info]  Nov  2 08:41:09 chat[379]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:41:09.700 [info]  Nov  2 08:41:09 chat[379]: OK
+
+08:41:09.701 [info]  Nov  2 08:41:09 chat[379]:  -- got it
+
+
+08:41:09.701 [info]  Nov  2 08:41:09 chat[379]: send (AT+QCFG="nwscanseq",02^M)
+
+08:41:09.933 [info]  Nov  2 08:41:09 chat[379]: expect (OK)
+
+08:41:09.933 [info]  Nov  2 08:41:09 chat[379]: ^M
+
+08:41:09.939 [info]  Nov  2 08:41:09 chat[379]: AT+QCFG="nwscanseq",02^M^M
+
+08:41:09.939 [info]  Nov  2 08:41:09 chat[379]: OK
+
+08:41:09.939 [info]  Nov  2 08:41:09 chat[379]:  -- got it
+
+
+08:41:09.940 [info]  Nov  2 08:41:09 chat[379]: send (AT+QCFG="nwscanmode",3^M)
+
+08:41:10.171 [info]  Nov  2 08:41:10 chat[379]: expect (OK)
+
+08:41:10.172 [info]  Nov  2 08:41:10 chat[379]: ^M
+
+08:41:10.174 [info]  Nov  2 08:41:10 chat[379]: AT+QCFG="nwscanmode",3^M^M
+
+08:41:10.174 [info]  Nov  2 08:41:10 chat[379]: OK
+
+08:41:10.174 [info]  Nov  2 08:41:10 chat[379]:  -- got it
+
+
+08:41:10.174 [info]  Nov  2 08:41:10 chat[379]: send (AT+QCFG="iotopmode",0^M)
+
+08:41:10.394 [info]  Nov  2 08:41:10 chat[379]: expect (OK)
+
+08:41:10.394 [info]  Nov  2 08:41:10 chat[379]: ^M
+
+08:41:10.397 [info]  Nov  2 08:41:10 chat[379]: AT+QCFG="iotopmode",0^M^M
+
+08:41:10.397 [info]  Nov  2 08:41:10 chat[379]: OK
+
+08:41:10.397 [info]  Nov  2 08:41:10 chat[379]:  -- got it
+
+
+08:41:10.397 [info]  Nov  2 08:41:10 chat[379]: send (ATDT*99***1#^M)
+
+08:41:10.526 [info]  Nov  2 08:41:10 chat[379]: expect (CONNECT)
+
+08:41:10.527 [info]  Nov  2 08:41:10 chat[379]: ^M
+
+08:41:10.529 [info]  Nov  2 08:41:10 chat[379]: ATDT*99***1#^M^M
+
+08:41:10.530 [info]  Nov  2 08:41:10 chat[379]: CONNECT
+
+08:41:10.530 [info]  Nov  2 08:41:10 chat[379]:  -- got it
+
+
+08:41:10.531 [info]  Nov  2 08:41:10 chat[379]: send (^M)
+
+08:41:10.540 [debug] Nov  2 08:41:10 pppd[248]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 379), status = 0x0
+
+08:41:10.540 [info]  Nov  2 08:41:10 pppd[248]: Serial connection established.
+
+08:41:10.543 [debug] Nov  2 08:41:10 pppd[248]: using channel 5
+
+08:41:10.543 [info]  Nov  2 08:41:10 pppd[248]: Using interface ppp0
+
+08:41:10.543 [info]  Nov  2 08:41:10 pppd[248]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:41:11.543 [debug] Nov  2 08:41:11 pppd[248]: sent [LCP ConfReq id=0x5 <asyncmap 0x0> <magic 0xe2f21021> <pcomp> <accomp>]
+
+08:41:11.544 [debug] Nov  2 08:41:11 pppd[248]: rcvd [LCP ConfReq id=0x14 <asyncmap 0x0> <auth chap MD5> <magic 0xc7a9a19a> <pcomp> <accomp>]
+
+08:41:11.545 [debug] Nov  2 08:41:11 pppd[248]: No auth is possible
+
+08:41:11.545 [debug] Nov  2 08:41:11 pppd[248]: sent [LCP ConfRej id=0x14 <auth chap MD5>]
+
+08:41:11.545 [debug] Nov  2 08:41:11 pppd[248]: rcvd [LCP ConfAck id=0x5 <asyncmap 0x0> <magic 0xe2f21021> <pcomp> <accomp>]
+
+08:41:11.545 [debug] Nov  2 08:41:11 pppd[248]: rcvd [LCP ConfReq id=0x15 <asyncmap 0x0> <magic 0xc7a9a19a> <pcomp> <accomp>]
+
+08:41:11.545 [debug] Nov  2 08:41:11 pppd[248]: sent [LCP ConfAck id=0x15 <asyncmap 0x0> <magic 0xc7a9a19a> <pcomp> <accomp>]
+
+08:41:11.546 [debug] Nov  2 08:41:11 pppd[248]: sent [CCP ConfReq id=0x5 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:41:11.546 [debug] Nov  2 08:41:11 pppd[248]: sent [IPCP ConfReq id=0xd <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:41:11.546 [debug] Nov  2 08:41:11 pppd[248]: rcvd [LCP DiscReq id=0x16 magic=0xc7a9a19a]
+
+08:41:11.546 [debug] Nov  2 08:41:11 pppd[248]: rcvd [LCP ProtRej id=0x17 80 fd 01 05 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:41:11.547 [debug] Nov  2 08:41:11 pppd[248]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:41:11.562 [debug] Nov  2 08:41:11 pppd[248]: rcvd [IPCP ConfReq id=0x8]
+
+08:41:11.562 [debug] Nov  2 08:41:11 pppd[248]: sent [IPCP ConfNak id=0x8 <addr 0.0.0.0>]
+
+08:41:11.563 [debug] Nov  2 08:41:11 pppd[248]: rcvd [IPCP ConfRej id=0xd <compress VJ 0f 01>]
+
+08:41:11.563 [debug] Nov  2 08:41:11 pppd[248]: sent [IPCP ConfReq id=0xe <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:41:11.563 [debug] Nov  2 08:41:11 pppd[248]: rcvd [IPCP ConfReq id=0x9]
+
+08:41:11.563 [debug] Nov  2 08:41:11 pppd[248]: sent [IPCP ConfAck id=0x9]
+
+08:41:11.563 [debug] Nov  2 08:41:11 pppd[248]: rcvd [IPCP ConfNak id=0xe <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:41:11.563 [debug] Nov  2 08:41:11 pppd[248]: sent [IPCP ConfReq id=0xf <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:41:11.564 [debug] Nov  2 08:41:11 pppd[248]: rcvd [IPCP ConfAck id=0xf <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:41:11.564 [warn]  Nov  2 08:41:11 pppd[248]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:41:11.566 [debug] Nov  2 08:41:11 pppd[248]: Script /etc/ppp/ip-pre-up started (pid 380)
+
+08:41:11.570 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:41:11.571 [debug] Nov  2 08:41:11 pppd[248]: Script /etc/ppp/ip-pre-up finished (pid 380), status = 0x0
+
+08:41:11.571 [info]  Nov  2 08:41:11 pppd[248]: local  IP address 100.85.118.2
+
+08:41:11.571 [info]  Nov  2 08:41:11 pppd[248]: remote IP address 10.64.64.64
+
+08:41:11.571 [info]  Nov  2 08:41:11 pppd[248]: primary   DNS address 8.8.8.8
+
+08:41:11.572 [info]  Nov  2 08:41:11 pppd[248]: secondary DNS address 8.8.4.4
+
+08:41:11.572 [debug] Nov  2 08:41:11 pppd[248]: Script /etc/ppp/ip-up started (pid 381)
+
+08:41:11.576 [debug] Nov  2 08:41:11 pppd[248]: Script /etc/ppp/ip-up finished (pid 381), status = 0x0
+
+08:41:11.576 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:41:11.577 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:41:36.024 [warn]  Send "AT+QSPN" failed: {:error, "ERROR"}. Ignoring...
+
+08:41:45.394 [debug] Nov  2 08:41:45 pppd[248]: rcvd [LCP TermReq id=0x18]
+
+08:41:45.394 [info]  Nov  2 08:41:45 pppd[248]: LCP terminated by peer
+
+08:41:45.395 [info]  Nov  2 08:41:45 pppd[248]: Connect time 0.6 minutes.
+
+08:41:45.395 [info]  Nov  2 08:41:45 pppd[248]: Sent 0 bytes, received 0 bytes.
+
+08:41:45.396 [debug] Nov  2 08:41:45 pppd[248]: Script /etc/ppp/ip-down started (pid 388)
+
+08:41:45.396 [debug] Nov  2 08:41:45 pppd[248]: sent [LCP TermAck id=0x18]
+
+08:41:45.398 [info]  Nov  2 08:41:45 pppd[248]: Modem hangup
+
+08:41:45.399 [info]  Nov  2 08:41:45 pppd[248]: Connection terminated.
+
+08:41:45.400 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "34", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:41:45.400 [info]  RouteManager: clear_route ppp0
+
+08:41:45.439 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:41:45.472 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:41:45.503 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:41:45.536 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:41:46.458 [debug] Nov  2 08:41:46 pppd[248]: Script /etc/ppp/ip-down finished (pid 388), status = 0x0
+
+08:42:17.497 [info]  Nov  2 08:42:17 chat[403]: abort on (BUSY)
+
+08:42:17.497 [info]  Nov  2 08:42:17 chat[403]: abort on (NO CARRIER)
+
+08:42:17.497 [info]  Nov  2 08:42:17 chat[403]: abort on (NO DIALTONE)
+
+08:42:17.497 [info]  Nov  2 08:42:17 chat[403]: abort on (NO DIAL TONE)
+
+08:42:17.497 [info]  Nov  2 08:42:17 chat[403]: abort on (NO ANSWER)
+
+08:42:17.497 [info]  Nov  2 08:42:17 chat[403]: abort on (DELAYED)
+
+08:42:17.497 [info]  Nov  2 08:42:17 chat[403]: timeout set to 10 seconds
+
+08:42:17.498 [info]  Nov  2 08:42:17 chat[403]: report (CONNECT)
+
+08:42:17.498 [info]  Nov  2 08:42:17 chat[403]: send (+++^M)
+
+08:42:17.537 [info]  Nov  2 08:42:17 chat[403]: send (AT^M)
+
+08:42:17.567 [info]  Nov  2 08:42:17 chat[403]: expect (OK)
+
+08:42:17.569 [info]  Nov  2 08:42:17 chat[403]: AT^M^M
+
+08:42:17.569 [info]  Nov  2 08:42:17 chat[403]: OK
+
+08:42:17.569 [info]  Nov  2 08:42:17 chat[403]:  -- got it
+
+
+08:42:17.569 [info]  Nov  2 08:42:17 chat[403]: send (ATH^M)
+
+08:42:17.609 [info]  Nov  2 08:42:17 chat[403]: expect (OK)
+
+08:42:17.609 [info]  Nov  2 08:42:17 chat[403]: ^M
+
+08:42:17.610 [info]  Nov  2 08:42:17 chat[403]: ATH^M^M
+
+08:42:17.610 [info]  Nov  2 08:42:17 chat[403]: OK
+
+08:42:17.610 [info]  Nov  2 08:42:17 chat[403]:  -- got it
+
+
+08:42:17.610 [info]  Nov  2 08:42:17 chat[403]: send (ATZ^M)
+
+08:42:17.650 [info]  Nov  2 08:42:17 chat[403]: expect (OK)
+
+08:42:17.651 [info]  Nov  2 08:42:17 chat[403]: ^M
+
+08:42:17.653 [info]  Nov  2 08:42:17 chat[403]: ATZ^M^M
+
+08:42:17.653 [info]  Nov  2 08:42:17 chat[403]: OK
+
+08:42:17.653 [info]  Nov  2 08:42:17 chat[403]:  -- got it
+
+
+08:42:17.653 [info]  Nov  2 08:42:17 chat[403]: send (ATQ0^M)
+
+08:42:17.703 [info]  Nov  2 08:42:17 chat[403]: expect (OK)
+
+08:42:17.703 [info]  Nov  2 08:42:17 chat[403]: ^M
+
+08:42:17.705 [info]  Nov  2 08:42:17 chat[403]: ATQ0^M^M
+
+08:42:17.705 [info]  Nov  2 08:42:17 chat[403]: OK
+
+08:42:17.706 [info]  Nov  2 08:42:17 chat[403]:  -- got it
+
+
+08:42:17.706 [info]  Nov  2 08:42:17 chat[403]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:42:17.936 [info]  Nov  2 08:42:17 chat[403]: expect (OK)
+
+08:42:17.936 [info]  Nov  2 08:42:17 chat[403]: ^M
+
+08:42:17.955 [info]  Nov  2 08:42:17 chat[403]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:42:17.955 [info]  Nov  2 08:42:17 chat[403]: OK
+
+08:42:17.955 [info]  Nov  2 08:42:17 chat[403]:  -- got it
+
+
+08:42:17.955 [info]  Nov  2 08:42:17 chat[403]: send (AT+QCFG="nwscanseq",02^M)
+
+08:42:18.187 [info]  Nov  2 08:42:18 chat[403]: expect (OK)
+
+08:42:18.187 [info]  Nov  2 08:42:18 chat[403]: ^M
+
+08:42:18.194 [info]  Nov  2 08:42:18 chat[403]: AT+QCFG="nwscanseq",02^M^M
+
+08:42:18.194 [info]  Nov  2 08:42:18 chat[403]: OK
+
+08:42:18.194 [info]  Nov  2 08:42:18 chat[403]:  -- got it
+
+
+08:42:18.194 [info]  Nov  2 08:42:18 chat[403]: send (AT+QCFG="nwscanmode",3^M)
+
+08:42:18.426 [info]  Nov  2 08:42:18 chat[403]: expect (OK)
+
+08:42:18.426 [info]  Nov  2 08:42:18 chat[403]: ^M
+
+08:42:18.428 [info]  Nov  2 08:42:18 chat[403]: AT+QCFG="nwscanmode",3^M^M
+
+08:42:18.428 [info]  Nov  2 08:42:18 chat[403]: OK
+
+08:42:18.429 [info]  Nov  2 08:42:18 chat[403]:  -- got it
+
+
+08:42:18.429 [info]  Nov  2 08:42:18 chat[403]: send (AT+QCFG="iotopmode",0^M)
+
+08:42:18.649 [info]  Nov  2 08:42:18 chat[403]: expect (OK)
+
+08:42:18.649 [info]  Nov  2 08:42:18 chat[403]: ^M
+
+08:42:18.651 [info]  Nov  2 08:42:18 chat[403]: AT+QCFG="iotopmode",0^M^M
+
+08:42:18.652 [info]  Nov  2 08:42:18 chat[403]: OK
+
+08:42:18.652 [info]  Nov  2 08:42:18 chat[403]:  -- got it
+
+
+08:42:18.652 [info]  Nov  2 08:42:18 chat[403]: send (ATDT*99***1#^M)
+
+08:42:18.781 [info]  Nov  2 08:42:18 chat[403]: expect (CONNECT)
+
+08:42:18.781 [info]  Nov  2 08:42:18 chat[403]: ^M
+
+08:42:18.784 [info]  Nov  2 08:42:18 chat[403]: ATDT*99***1#^M^M
+
+08:42:18.785 [info]  Nov  2 08:42:18 chat[403]: CONNECT
+
+08:42:18.785 [info]  Nov  2 08:42:18 chat[403]:  -- got it
+
+
+08:42:18.785 [info]  Nov  2 08:42:18 chat[403]: send (^M)
+
+08:42:18.795 [debug] Nov  2 08:42:18 pppd[248]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 403), status = 0x0
+
+08:42:18.795 [info]  Nov  2 08:42:18 pppd[248]: Serial connection established.
+
+08:42:18.798 [debug] Nov  2 08:42:18 pppd[248]: using channel 6
+
+08:42:18.798 [info]  Nov  2 08:42:18 pppd[248]: Using interface ppp0
+
+08:42:18.798 [info]  Nov  2 08:42:18 pppd[248]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:42:19.798 [debug] Nov  2 08:42:19 pppd[248]: sent [LCP ConfReq id=0x6 <asyncmap 0x0> <magic 0x18e1205f> <pcomp> <accomp>]
+
+08:42:19.799 [debug] Nov  2 08:42:19 pppd[248]: rcvd [LCP ConfReq id=0x19 <asyncmap 0x0> <auth chap MD5> <magic 0xc7aaad7d> <pcomp> <accomp>]
+
+08:42:19.799 [debug] Nov  2 08:42:19 pppd[248]: No auth is possible
+
+08:42:19.800 [debug] Nov  2 08:42:19 pppd[248]: sent [LCP ConfRej id=0x19 <auth chap MD5>]
+
+08:42:19.800 [debug] Nov  2 08:42:19 pppd[248]: rcvd [LCP ConfAck id=0x6 <asyncmap 0x0> <magic 0x18e1205f> <pcomp> <accomp>]
+
+08:42:19.800 [debug] Nov  2 08:42:19 pppd[248]: rcvd [LCP ConfReq id=0x1a <asyncmap 0x0> <magic 0xc7aaad7d> <pcomp> <accomp>]
+
+08:42:19.800 [debug] Nov  2 08:42:19 pppd[248]: sent [LCP ConfAck id=0x1a <asyncmap 0x0> <magic 0xc7aaad7d> <pcomp> <accomp>]
+
+08:42:19.800 [debug] Nov  2 08:42:19 pppd[248]: sent [CCP ConfReq id=0x6 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:42:19.801 [debug] Nov  2 08:42:19 pppd[248]: sent [IPCP ConfReq id=0x10 <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:42:19.801 [debug] Nov  2 08:42:19 pppd[248]: rcvd [LCP DiscReq id=0x1b magic=0xc7aaad7d]
+
+08:42:19.801 [debug] Nov  2 08:42:19 pppd[248]: rcvd [LCP ProtRej id=0x1c 80 fd 01 06 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:42:19.802 [debug] Nov  2 08:42:19 pppd[248]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:42:19.818 [debug] Nov  2 08:42:19 pppd[248]: rcvd [IPCP ConfReq id=0xa]
+
+08:42:19.818 [debug] Nov  2 08:42:19 pppd[248]: sent [IPCP ConfNak id=0xa <addr 0.0.0.0>]
+
+08:42:19.818 [debug] Nov  2 08:42:19 pppd[248]: rcvd [IPCP ConfRej id=0x10 <compress VJ 0f 01>]
+
+08:42:19.819 [debug] Nov  2 08:42:19 pppd[248]: sent [IPCP ConfReq id=0x11 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:42:19.819 [debug] Nov  2 08:42:19 pppd[248]: rcvd [IPCP ConfReq id=0xb]
+
+08:42:19.819 [debug] Nov  2 08:42:19 pppd[248]: sent [IPCP ConfAck id=0xb]
+
+08:42:19.819 [debug] Nov  2 08:42:19 pppd[248]: rcvd [IPCP ConfNak id=0x11 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:42:19.820 [debug] Nov  2 08:42:19 pppd[248]: sent [IPCP ConfReq id=0x12 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:42:19.820 [debug] Nov  2 08:42:19 pppd[248]: rcvd [IPCP ConfAck id=0x12 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:42:19.821 [warn]  Nov  2 08:42:19 pppd[248]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:42:19.823 [debug] Nov  2 08:42:19 pppd[248]: Script /etc/ppp/ip-pre-up started (pid 404)
+
+08:42:19.826 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:42:19.827 [debug] Nov  2 08:42:19 pppd[248]: Script /etc/ppp/ip-pre-up finished (pid 404), status = 0x0
+
+08:42:19.827 [info]  Nov  2 08:42:19 pppd[248]: local  IP address 100.85.118.2
+
+08:42:19.827 [info]  Nov  2 08:42:19 pppd[248]: remote IP address 10.64.64.64
+
+08:42:19.827 [info]  Nov  2 08:42:19 pppd[248]: primary   DNS address 8.8.8.8
+
+08:42:19.828 [info]  Nov  2 08:42:19 pppd[248]: secondary DNS address 8.8.4.4
+
+08:42:19.829 [debug] Nov  2 08:42:19 pppd[248]: Script /etc/ppp/ip-up started (pid 405)
+
+08:42:19.832 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:42:19.832 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:42:19.833 [debug] Nov  2 08:42:19 pppd[248]: Script /etc/ppp/ip-up finished (pid 405), status = 0x0
+iex(6)>  weather
+** (RuntimeError) :inets can't be started.
+This probably means that it isn't in the OTP release.
+To fix, edit your mix.exs and add :inets to the :extra_applications list.
+
+    (toolshed 0.2.14) lib/toolshed/http.ex:89: Toolshed.HTTP.check_inets/0
+    (toolshed 0.2.14) lib/toolshed/http.ex:13: Toolshed.HTTP.weather/0
+
+08:42:36.024 [warn]  Send "AT+QSPN" failed: {:error, "ERROR"}. Ignoring...
+
+08:42:53.376 [debug] Nov  2 08:42:53 pppd[248]: rcvd [LCP TermReq id=0x1d]
+
+08:42:53.377 [info]  Nov  2 08:42:53 pppd[248]: LCP terminated by peer
+
+08:42:53.377 [info]  Nov  2 08:42:53 pppd[248]: Connect time 0.6 minutes.
+
+08:42:53.378 [info]  Nov  2 08:42:53 pppd[248]: Sent 0 bytes, received 0 bytes.
+
+08:42:53.379 [debug] Nov  2 08:42:53 pppd[248]: Script /etc/ppp/ip-down started (pid 412)
+
+08:42:53.379 [debug] Nov  2 08:42:53 pppd[248]: sent [LCP TermAck id=0x1d]
+
+08:42:53.383 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "34", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:42:53.383 [info]  RouteManager: clear_route ppp0
+
+08:42:53.384 [debug] Nov  2 08:42:53 pppd[248]: Script /etc/ppp/ip-down finished (pid 412), status = 0x0
+
+08:42:53.384 [info]  Nov  2 08:42:53 pppd[248]: Modem hangup
+
+08:42:53.384 [info]  Nov  2 08:42:53 pppd[248]: Connection terminated.
+
+08:42:53.422 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:42:53.455 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:42:53.487 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:42:53.519 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: abort on (BUSY)
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: abort on (NO CARRIER)
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: abort on (NO DIALTONE)
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: abort on (NO DIAL TONE)
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: abort on (NO ANSWER)
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: abort on (DELAYED)
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: timeout set to 10 seconds
+
+08:43:25.487 [info]  Nov  2 08:43:25 chat[426]: report (CONNECT)
+
+08:43:25.488 [info]  Nov  2 08:43:25 chat[426]: send (+++^M)
+
+08:43:25.527 [info]  Nov  2 08:43:25 chat[426]: send (AT^M)
+
+08:43:25.557 [info]  Nov  2 08:43:25 chat[426]: expect (OK)
+
+08:43:25.559 [info]  Nov  2 08:43:25 chat[426]: AT^M^M
+
+08:43:25.560 [info]  Nov  2 08:43:25 chat[426]: OK
+
+08:43:25.560 [info]  Nov  2 08:43:25 chat[426]:  -- got it
+
+
+08:43:25.560 [info]  Nov  2 08:43:25 chat[426]: send (ATH^M)
+
+08:43:25.599 [info]  Nov  2 08:43:25 chat[426]: expect (OK)
+
+08:43:25.599 [info]  Nov  2 08:43:25 chat[426]: ^M
+
+08:43:25.601 [info]  Nov  2 08:43:25 chat[426]: ATH^M^M
+
+08:43:25.602 [info]  Nov  2 08:43:25 chat[426]: OK
+
+08:43:25.602 [info]  Nov  2 08:43:25 chat[426]:  -- got it
+
+
+08:43:25.602 [info]  Nov  2 08:43:25 chat[426]: send (ATZ^M)
+
+08:43:25.640 [info]  Nov  2 08:43:25 chat[426]: expect (OK)
+
+08:43:25.640 [info]  Nov  2 08:43:25 chat[426]: ^M
+
+08:43:25.643 [info]  Nov  2 08:43:25 chat[426]: ATZ^M^M
+
+08:43:25.643 [info]  Nov  2 08:43:25 chat[426]: OK
+
+08:43:25.643 [info]  Nov  2 08:43:25 chat[426]:  -- got it
+
+
+08:43:25.643 [info]  Nov  2 08:43:25 chat[426]: send (ATQ0^M)
+
+08:43:25.692 [info]  Nov  2 08:43:25 chat[426]: expect (OK)
+
+08:43:25.693 [info]  Nov  2 08:43:25 chat[426]: ^M
+
+08:43:25.694 [info]  Nov  2 08:43:25 chat[426]: ATQ0^M^M
+
+08:43:25.694 [info]  Nov  2 08:43:25 chat[426]: OK
+
+08:43:25.694 [info]  Nov  2 08:43:25 chat[426]:  -- got it
+
+
+08:43:25.694 [info]  Nov  2 08:43:25 chat[426]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:43:25.926 [info]  Nov  2 08:43:25 chat[426]: expect (OK)
+
+08:43:25.926 [info]  Nov  2 08:43:25 chat[426]: ^M
+
+08:43:25.943 [info]  Nov  2 08:43:25 chat[426]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:43:25.943 [info]  Nov  2 08:43:25 chat[426]: OK
+
+08:43:25.943 [info]  Nov  2 08:43:25 chat[426]:  -- got it
+
+
+08:43:25.943 [info]  Nov  2 08:43:25 chat[426]: send (AT+QCFG="nwscanseq",02^M)
+
+08:43:26.176 [info]  Nov  2 08:43:26 chat[426]: expect (OK)
+
+08:43:26.176 [info]  Nov  2 08:43:26 chat[426]: ^M
+
+08:43:26.183 [info]  Nov  2 08:43:26 chat[426]: AT+QCFG="nwscanseq",02^M^M
+
+08:43:26.183 [info]  Nov  2 08:43:26 chat[426]: OK
+
+08:43:26.183 [info]  Nov  2 08:43:26 chat[426]:  -- got it
+
+
+08:43:26.183 [info]  Nov  2 08:43:26 chat[426]: send (AT+QCFG="nwscanmode",3^M)
+
+08:43:26.415 [info]  Nov  2 08:43:26 chat[426]: expect (OK)
+
+08:43:26.415 [info]  Nov  2 08:43:26 chat[426]: ^M
+
+08:43:26.418 [info]  Nov  2 08:43:26 chat[426]: AT+QCFG="nwscanmode",3^M^M
+
+08:43:26.418 [info]  Nov  2 08:43:26 chat[426]: OK
+
+08:43:26.418 [info]  Nov  2 08:43:26 chat[426]:  -- got it
+
+
+08:43:26.418 [info]  Nov  2 08:43:26 chat[426]: send (AT+QCFG="iotopmode",0^M)
+
+08:43:26.638 [info]  Nov  2 08:43:26 chat[426]: expect (OK)
+
+08:43:26.638 [info]  Nov  2 08:43:26 chat[426]: ^M
+
+08:43:26.640 [info]  Nov  2 08:43:26 chat[426]: AT+QCFG="iotopmode",0^M^M
+
+08:43:26.641 [info]  Nov  2 08:43:26 chat[426]: OK
+
+08:43:26.641 [info]  Nov  2 08:43:26 chat[426]:  -- got it
+
+
+08:43:26.641 [info]  Nov  2 08:43:26 chat[426]: send (ATDT*99***1#^M)
+
+08:43:26.770 [info]  Nov  2 08:43:26 chat[426]: expect (CONNECT)
+
+08:43:26.770 [info]  Nov  2 08:43:26 chat[426]: ^M
+
+08:43:26.773 [info]  Nov  2 08:43:26 chat[426]: ATDT*99***1#^M^M
+
+08:43:26.774 [info]  Nov  2 08:43:26 chat[426]: CONNECT
+
+08:43:26.775 [info]  Nov  2 08:43:26 chat[426]:  -- got it
+
+
+08:43:26.775 [info]  Nov  2 08:43:26 chat[426]: send (^M)
+
+08:43:26.784 [debug] Nov  2 08:43:26 pppd[248]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 426), status = 0x0
+
+08:43:26.785 [info]  Nov  2 08:43:26 pppd[248]: Serial connection established.
+
+08:43:26.785 [debug] Nov  2 08:43:26 pppd[248]: using channel 7
+
+08:43:26.785 [info]  Nov  2 08:43:26 pppd[248]: Using interface ppp0
+
+08:43:26.785 [info]  Nov  2 08:43:26 pppd[248]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:43:27.786 [debug] Nov  2 08:43:27 pppd[248]: sent [LCP ConfReq id=0x7 <asyncmap 0x0> <magic 0x8721b3f9> <pcomp> <accomp>]
+
+08:43:27.788 [debug] Nov  2 08:43:27 pppd[248]: rcvd [LCP ConfReq id=0x1e <asyncmap 0x0> <auth chap MD5> <magic 0xc7abb555> <pcomp> <accomp>]
+
+08:43:27.788 [debug] Nov  2 08:43:27 pppd[248]: No auth is possible
+
+08:43:27.788 [debug] Nov  2 08:43:27 pppd[248]: sent [LCP ConfRej id=0x1e <auth chap MD5>]
+
+08:43:27.789 [debug] Nov  2 08:43:27 pppd[248]: rcvd [LCP ConfAck id=0x7 <asyncmap 0x0> <magic 0x8721b3f9> <pcomp> <accomp>]
+
+08:43:27.789 [debug] Nov  2 08:43:27 pppd[248]: rcvd [LCP ConfReq id=0x1f <asyncmap 0x0> <magic 0xc7abb555> <pcomp> <accomp>]
+
+08:43:27.789 [debug] Nov  2 08:43:27 pppd[248]: sent [LCP ConfAck id=0x1f <asyncmap 0x0> <magic 0xc7abb555> <pcomp> <accomp>]
+
+08:43:27.790 [debug] Nov  2 08:43:27 pppd[248]: sent [CCP ConfReq id=0x7 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:43:27.790 [debug] Nov  2 08:43:27 pppd[248]: sent [IPCP ConfReq id=0x13 <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:43:27.790 [debug] Nov  2 08:43:27 pppd[248]: rcvd [LCP DiscReq id=0x20 magic=0xc7abb555]
+
+08:43:27.791 [debug] Nov  2 08:43:27 pppd[248]: rcvd [LCP ProtRej id=0x21 80 fd 01 07 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:43:27.791 [debug] Nov  2 08:43:27 pppd[248]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:43:27.805 [debug] Nov  2 08:43:27 pppd[248]: rcvd [IPCP ConfReq id=0xc]
+
+08:43:27.806 [debug] Nov  2 08:43:27 pppd[248]: sent [IPCP ConfNak id=0xc <addr 0.0.0.0>]
+
+08:43:27.806 [debug] Nov  2 08:43:27 pppd[248]: rcvd [IPCP ConfRej id=0x13 <compress VJ 0f 01>]
+
+08:43:27.806 [debug] Nov  2 08:43:27 pppd[248]: sent [IPCP ConfReq id=0x14 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:43:27.806 [debug] Nov  2 08:43:27 pppd[248]: rcvd [IPCP ConfReq id=0xd]
+
+08:43:27.806 [debug] Nov  2 08:43:27 pppd[248]: sent [IPCP ConfAck id=0xd]
+
+08:43:27.806 [debug] Nov  2 08:43:27 pppd[248]: rcvd [IPCP ConfNak id=0x14 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:43:27.807 [debug] Nov  2 08:43:27 pppd[248]: sent [IPCP ConfReq id=0x15 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:43:27.808 [debug] Nov  2 08:43:27 pppd[248]: rcvd [IPCP ConfAck id=0x15 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:43:27.808 [warn]  Nov  2 08:43:27 pppd[248]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:43:27.810 [debug] Nov  2 08:43:27 pppd[248]: Script /etc/ppp/ip-pre-up started (pid 427)
+
+08:43:27.813 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:43:27.813 [debug] Nov  2 08:43:27 pppd[248]: Script /etc/ppp/ip-pre-up finished (pid 427), status = 0x0
+
+08:43:27.813 [info]  Nov  2 08:43:27 pppd[248]: local  IP address 100.85.118.2
+
+08:43:27.813 [info]  Nov  2 08:43:27 pppd[248]: remote IP address 10.64.64.64
+
+08:43:27.813 [info]  Nov  2 08:43:27 pppd[248]: primary   DNS address 8.8.8.8
+
+08:43:27.814 [info]  Nov  2 08:43:27 pppd[248]: secondary DNS address 8.8.4.4
+
+08:43:27.815 [debug] Nov  2 08:43:27 pppd[248]: Script /etc/ppp/ip-up started (pid 428)
+
+08:43:27.819 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:43:27.819 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:43:27.819 [debug] Nov  2 08:43:27 pppd[248]: Script /etc/ppp/ip-up finished (pid 428), status = 0x0
+
+08:44:02.622 [debug] Nov  2 08:44:02 pppd[248]: rcvd [LCP TermReq id=0x22]
+
+08:44:02.622 [info]  Nov  2 08:44:02 pppd[248]: LCP terminated by peer
+
+08:44:02.623 [info]  Nov  2 08:44:02 pppd[248]: Connect time 0.6 minutes.
+
+08:44:02.623 [info]  Nov  2 08:44:02 pppd[248]: Sent 0 bytes, received 0 bytes.
+
+08:44:02.624 [debug] Nov  2 08:44:02 pppd[248]: Script /etc/ppp/ip-down started (pid 435)
+
+08:44:02.625 [debug] Nov  2 08:44:02 pppd[248]: sent [LCP TermAck id=0x22]
+
+08:44:02.628 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "35", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "248", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:44:02.628 [info]  RouteManager: clear_route ppp0
+
+08:44:02.629 [debug] Nov  2 08:44:02 pppd[248]: Script /etc/ppp/ip-down finished (pid 435), status = 0x0
+
+08:44:02.629 [info]  Nov  2 08:44:02 pppd[248]: Modem hangup
+
+08:44:02.629 [info]  Nov  2 08:44:02 pppd[248]: Connection terminated.
+
+08:44:02.666 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:44:02.698 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:44:02.730 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:44:02.762 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"

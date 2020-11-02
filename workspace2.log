@@ -1,0 +1,1467 @@
+iex(3)> RingLogger.attach
+:ok
+
+08:17:34.712 [info]  usb 1-1.1: new high-speed USB device number 3 using xhci_hcd
+
+08:17:34.856 [info]  usb 1-1.1: New USB device found, idVendor=2c7c, idProduct=0296, bcdDevice= 0.00
+
+08:17:34.856 [info]  usb 1-1.1: New USB device strings: Mfr=3, Product=2, SerialNumber=4
+
+08:17:34.857 [info]  usb 1-1.1: Product: Qualcomm CDMA Technologies MSM
+
+08:17:34.863 [info]  usb 1-1.1: Manufacturer: Qualcomm, Incorporated
+
+08:17:34.872 [info]  usb 1-1.1: SerialNumber: 8b00d7d3
+
+08:17:34.928 [info]  usbcore: registered new interface driver option
+
+08:17:34.928 [info]  usbserial: USB Serial support registered for GSM modem (1-port)
+
+08:17:34.928 [info]  option 1-1.1:1.0: GSM modem (1-port) converter detected
+
+08:17:34.935 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB0
+
+08:17:34.949 [info]  option 1-1.1:1.1: GSM modem (1-port) converter detected
+
+08:17:34.949 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB1
+
+08:17:34.963 [info]  option 1-1.1:1.2: GSM modem (1-port) converter detected
+
+08:17:34.963 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB2
+
+08:17:34.977 [info]  option 1-1.1:1.3: GSM modem (1-port) converter detected
+
+08:17:34.977 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB3
+
+08:17:35.053 [info]  usbcore: registered new interface driver cdc_wdm
+
+08:17:35.053 [info]  qmi_wwan 1-1.1:1.4: cdc-wdm0: USB WDM device
+
+08:17:35.072 [info]  qmi_wwan 1-1.1:1.4 wwan0: register 'qmi_wwan' at usb-0000:01:00.0-1.1, WWAN/QMI device, c2:d2:56:c3:95:e3
+
+08:17:35.072 [info]  usbcore: registered new interface driver qmi_wwan
+iex(4)> VintageNet.In
+Info                    Interface               InterfaceRenamer
+InterfacesMonitor       InterfacesSupervisor
+iex(4)> VintageNet.In
+Info                    Interface               InterfaceRenamer
+InterfacesMonitor       InterfacesSupervisor
+iex(4)> VintageNet.Info.info
+VintageNet 0.9.2
+
+All interfaces:       ["eth0", "lo", "wlan0", "wwan0"]
+Available interfaces: ["wlan0"]
+
+Interface wlan0
+  Type: VintageNetWiFi
+  Present: true
+  State: :configured (0:02:09)
+  Connection: :internet (0:01:31)
+  Addresses: 192.168.0.120/24, fe80::dea6:32ff:fec5:b788/64
+  Configuration:
+    %{
+      ipv4: %{method: :dhcp},
+      type: VintageNetWiFi,
+      vintage_net_wifi: %{
+        networks: [
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."},
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."}
+        ]
+      }
+    }
+
+:ok
+iex(5)> Elixircom.run("/dev/ttyUSB3", speed: 115200)
+:ok
+iex(6)> Elixircom.run("/dev/ttyUSB2", speed: 115200)
+:ok
+iex(7)> RingLogger.next
+
+08:17:34.712 [info]  usb 1-1.1: new high-speed USB device number 3 using xhci_hcd
+
+08:17:34.856 [info]  usb 1-1.1: New USB device found, idVendor=2c7c, idProduct=0296, bcdDevice= 0.00
+
+08:17:34.856 [info]  usb 1-1.1: New USB device strings: Mfr=3, Product=2, SerialNumber=4
+
+08:17:34.857 [info]  usb 1-1.1: Product: Qualcomm CDMA Technologies MSM
+
+08:17:34.863 [info]  usb 1-1.1: Manufacturer: Qualcomm, Incorporated
+
+08:17:34.872 [info]  usb 1-1.1: SerialNumber: 8b00d7d3
+
+08:17:34.928 [info]  usbcore: registered new interface driver option
+
+08:17:34.928 [info]  usbserial: USB Serial support registered for GSM modem (1-port)
+
+08:17:34.928 [info]  option 1-1.1:1.0: GSM modem (1-port) converter detected
+
+08:17:34.935 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB0
+
+08:17:34.949 [info]  option 1-1.1:1.1: GSM modem (1-port) converter detected
+
+08:17:34.949 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB1
+
+08:17:34.963 [info]  option 1-1.1:1.2: GSM modem (1-port) converter detected
+
+08:17:34.963 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB2
+
+08:17:34.977 [info]  option 1-1.1:1.3: GSM modem (1-port) converter detected
+
+08:17:34.977 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB3
+
+08:17:35.053 [info]  usbcore: registered new interface driver cdc_wdm
+
+08:17:35.053 [info]  qmi_wwan 1-1.1:1.4: cdc-wdm0: USB WDM device
+
+08:17:35.072 [info]  qmi_wwan 1-1.1:1.4 wwan0: register 'qmi_wwan' at usb-0000:01:00.0-1.1, WWAN/QMI device, c2:d2:56:c3:95:e3
+
+08:17:35.072 [info]  usbcore: registered new interface driver qmi_wwan
+
+20 out of 20 new messages shown.
+:ok
+iex(8)> RingLogger.next
+No new messages.
+:ok
+iex(9)>
+nil
+iex(10)>
+nil
+iex(11)> Elixircom.run("/dev/ttyUSB1", speed: 115200)
+:ok
+iex(12)>
+nil
+
+08:22:25.737 [info]  usb 1-1.1: USB disconnect, device number 3
+
+08:22:25.737 [info]  option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+
+08:22:25.737 [info]  option 1-1.1:1.0: device disconnected
+
+08:22:25.741 [error] GenServer #PID<0.1239.0> terminating
+** (FunctionClauseError) no function clause matching in Elixircom.Server.terminate/2
+    (elixircom 0.2.0) lib/elixircom_server.ex:65: Elixircom.Server.terminate({:function_clause, [{Elixircom.Server, :"-uart_to_printable/1-lbc$^0/2-0-", [{:error, :eio}, ""], [file: 'lib/elixircom_server.ex', line: 71]}, {Elixircom.Server, :handle_info, 2, [file: 'lib/elixircom_server.ex', line: 60]}, {:gen_server, :try_dispatch, 4, [file: 'gen_server.erl', line: 680]}, {:gen_server, :handle_msg, 6, [file: 'gen_server.erl', line: 756]}, {:proc_lib, :init_p_do_apply, 3, [file: 'proc_lib.erl', line: 226]}]}, %Elixircom.Server.State{group_leader: #PID<0.1217.0>, io_restore_opts: [expand_fun: &IEx.Autocomplete.expand/1, echo: true, binary: true, encoding: :latin1], serial_port_name: "/dev/ttyUSB1", uart: #PID<0.1240.0>})
+    (stdlib 3.13.2) gen_server.erl:718: :gen_server.try_terminate/3
+    (stdlib 3.13.2) gen_server.erl:903: :gen_server.terminate/10
+    (stdlib 3.13.2) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: {:circuits_uart, "/dev/ttyUSB1", {:error, :eio}}
+State: %Elixircom.Server.State{group_leader: #PID<0.1217.0>, io_restore_opts: [expand_fun: &IEx.Autocomplete.expand/1, echo: true, binary: true, encoding: :latin1], serial_port_name: "/dev/ttyUSB1", uart: #PID<0.1240.0>}
+
+08:22:25.746 [info]  option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+
+08:22:25.753 [info]  option 1-1.1:1.1: device disconnected
+
+08:22:25.756 [error] GenServer #PID<0.1232.0> terminating
+** (FunctionClauseError) no function clause matching in Elixircom.Server.terminate/2
+    (elixircom 0.2.0) lib/elixircom_server.ex:65: Elixircom.Server.terminate({:function_clause, [{Elixircom.Server, :"-uart_to_printable/1-lbc$^0/2-0-", [{:error, :eio}, ""], [file: 'lib/elixircom_server.ex', line: 71]}, {Elixircom.Server, :handle_info, 2, [file: 'lib/elixircom_server.ex', line: 60]}, {:gen_server, :try_dispatch, 4, [file: 'gen_server.erl', line: 680]}, {:gen_server, :handle_msg, 6, [file: 'gen_server.erl', line: 756]}, {:proc_lib, :init_p_do_apply, 3, [file: 'proc_lib.erl', line: 226]}]}, %Elixircom.Server.State{group_leader: #PID<0.1217.0>, io_restore_opts: [expand_fun: &IEx.Autocomplete.expand/1, echo: true, binary: true, encoding: :latin1], serial_port_name: "/dev/ttyUSB2", uart: #PID<0.1233.0>})
+    (stdlib 3.13.2) gen_server.erl:718: :gen_server.try_terminate/3
+    (stdlib 3.13.2) gen_server.erl:903: :gen_server.terminate/10
+    (stdlib 3.13.2) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: {:circuits_uart, "/dev/ttyUSB2", {:error, :eio}}
+State: %Elixircom.Server.State{group_leader: #PID<0.1217.0>, io_restore_opts: [expand_fun: &IEx.Autocomplete.expand/1, echo: true, binary: true, encoding: :latin1], serial_port_name: "/dev/ttyUSB2", uart: #PID<0.1233.0>}
+
+08:22:25.766 [info]  option1 ttyUSB2: GSM modem (1-port) converter now disconnected from ttyUSB2
+
+08:22:25.766 [info]  option 1-1.1:1.2: device disconnected
+
+08:22:25.770 [error] GenServer #PID<0.1229.0> terminating
+** (FunctionClauseError) no function clause matching in Elixircom.Server.terminate/2
+    (elixircom 0.2.0) lib/elixircom_server.ex:65: Elixircom.Server.terminate({:function_clause, [{Elixircom.Server, :"-uart_to_printable/1-lbc$^0/2-0-", [{:error, :eio}, ""], [file: 'lib/elixircom_server.ex', line: 71]}, {Elixircom.Server, :handle_info, 2, [file: 'lib/elixircom_server.ex', line: 60]}, {:gen_server, :try_dispatch, 4, [file: 'gen_server.erl', line: 680]}, {:gen_server, :handle_msg, 6, [file: 'gen_server.erl', line: 756]}, {:proc_lib, :init_p_do_apply, 3, [file: 'proc_lib.erl', line: 226]}]}, %Elixircom.Server.State{group_leader: #PID<0.1217.0>, io_restore_opts: [expand_fun: &IEx.Autocomplete.expand/1, echo: true, binary: true, encoding: :latin1], serial_port_name: "/dev/ttyUSB3", uart: #PID<0.1230.0>})
+    (stdlib 3.13.2) gen_server.erl:718: :gen_server.try_terminate/3
+    (stdlib 3.13.2) gen_server.erl:903: :gen_server.terminate/10
+    (stdlib 3.13.2) proc_lib.erl:226: :proc_lib.init_p_do_apply/3
+Last message: {:circuits_uart, "/dev/ttyUSB3", {:error, :eio}}
+State: %Elixircom.Server.State{group_leader: #PID<0.1217.0>, io_restore_opts: [expand_fun: &IEx.Autocomplete.expand/1, echo: true, binary: true, encoding: :latin1], serial_port_name: "/dev/ttyUSB3", uart: #PID<0.1230.0>}
+
+08:22:25.775 [info]  option1 ttyUSB3: GSM modem (1-port) converter now disconnected from ttyUSB3
+
+08:22:25.790 [info]  option 1-1.1:1.3: device disconnected
+
+08:22:25.790 [info]  qmi_wwan 1-1.1:1.4 wwan0: unregister 'qmi_wwan' usb-0000:01:00.0-1.1, WWAN/QMI device
+
+08:22:31.352 [info]  usb 1-1.1: new high-speed USB device number 4 using xhci_hcd
+
+08:22:31.496 [info]  usb 1-1.1: New USB device found, idVendor=2c7c, idProduct=0296, bcdDevice= 0.00
+
+08:22:31.497 [info]  usb 1-1.1: New USB device strings: Mfr=3, Product=2, SerialNumber=4
+
+08:22:31.497 [info]  usb 1-1.1: Product: Qualcomm CDMA Technologies MSM
+
+08:22:31.497 [info]  usb 1-1.1: Manufacturer: Qualcomm, Incorporated
+
+08:22:31.512 [info]  usb 1-1.1: SerialNumber: 8b00d7d3
+
+08:22:31.532 [info]  option 1-1.1:1.0: GSM modem (1-port) converter detected
+
+08:22:31.547 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB0
+
+08:22:31.547 [info]  option 1-1.1:1.1: GSM modem (1-port) converter detected
+
+08:22:31.555 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB1
+
+08:22:31.563 [info]  option 1-1.1:1.2: GSM modem (1-port) converter detected
+
+08:22:31.571 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB2
+
+08:22:31.579 [info]  option 1-1.1:1.3: GSM modem (1-port) converter detected
+
+08:22:31.586 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB3
+
+08:22:31.610 [info]  qmi_wwan 1-1.1:1.4: cdc-wdm0: USB WDM device
+
+08:22:31.610 [info]  qmi_wwan 1-1.1:1.4 wwan0: register 'qmi_wwan' at usb-0000:01:00.0-1.1, WWAN/QMI device, c2:d2:56:c3:95:e3
+iex(13)>
+nil
+iex(14)> VintageNet.In
+Info                    Interface               InterfaceRenamer
+InterfacesMonitor       InterfacesSupervisor
+iex(14)> VintageNet.Info.info
+info/0    info/1
+iex(14)> VintageNet.Info.info
+VintageNet 0.9.2
+
+All interfaces:       ["eth0", "lo", "wlan0", "wwan0"]
+Available interfaces: ["wlan0"]
+
+Interface wlan0
+  Type: VintageNetWiFi
+  Present: true
+  State: :configured (0:06:27)
+  Connection: :internet (0:05:49)
+  Addresses: 192.168.0.120/24, fe80::dea6:32ff:fec5:b788/64
+  Configuration:
+    %{
+      ipv4: %{method: :dhcp},
+      type: VintageNetWiFi,
+      vintage_net_wifi: %{
+        networks: [
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."},
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."}
+        ]
+      }
+    }
+
+:ok
+iex(15)> VintageNet.Info.info("wwan0")
+** (FunctionClauseError) no function clause matching in Keyword.get/3
+
+    The following arguments were given to Keyword.get/3:
+
+        # 1
+        "wwan0"
+
+        # 2
+        :redact
+
+        # 3
+        true
+
+    Attempted function clauses (showing 1 out of 1):
+
+        def get(keywords, key, default) when is_list(keywords) and is_atom(key)
+
+    (elixir 1.10.4) lib/keyword.ex:201: Keyword.get/3
+    (vintage_net 0.9.2) lib/vintage_net/info.ex:92: VintageNet.Info.format_config/3
+    (vintage_net 0.9.2) lib/vintage_net/info.ex:61: VintageNet.Info.format_interface/2
+    (elixir 1.10.4) lib/enum.ex:1396: Enum."-map/2-lists^map/1-0-"/2
+    (vintage_net 0.9.2) lib/vintage_net/info.ex:18: VintageNet.Info.info/1
+iex(15)> VintageNet.Info.info("wlan0")
+** (FunctionClauseError) no function clause matching in Keyword.get/3
+
+    The following arguments were given to Keyword.get/3:
+
+        # 1
+        "wlan0"
+
+        # 2
+        :redact
+
+        # 3
+        true
+
+    Attempted function clauses (showing 1 out of 1):
+
+        def get(keywords, key, default) when is_list(keywords) and is_atom(key)
+
+    (elixir 1.10.4) lib/keyword.ex:201: Keyword.get/3
+    (vintage_net 0.9.2) lib/vintage_net/info.ex:92: VintageNet.Info.format_config/3
+    (vintage_net 0.9.2) lib/vintage_net/info.ex:61: VintageNet.Info.format_interface/2
+    (elixir 1.10.4) lib/enum.ex:1396: Enum."-map/2-lists^map/1-0-"/2
+    (vintage_net 0.9.2) lib/vintage_net/info.ex:18: VintageNet.Info.info/1
+iex(15)> VintageNet.Info.info
+VintageNet 0.9.2
+
+All interfaces:       ["eth0", "lo", "wlan0", "wwan0"]
+Available interfaces: ["wlan0"]
+
+Interface wlan0
+  Type: VintageNetWiFi
+  Present: true
+  State: :configured (0:06:51)
+  Connection: :internet (0:06:13)
+  Addresses: 192.168.0.120/24, fe80::dea6:32ff:fec5:b788/64
+  Configuration:
+    %{
+      ipv4: %{method: :dhcp},
+      type: VintageNetWiFi,
+      vintage_net_wifi: %{
+        networks: [
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."},
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."}
+        ]
+      }
+    }
+
+:ok
+iex(16)> ifconfig
+lo: flags=[:up, :loopback, :running]
+    inet 127.0.0.1  netmask 255.0.0.0
+    inet ::1  netmask ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+    hwaddr 00:00:00:00:00:00
+
+eth0: flags=[:broadcast, :multicast]
+    hwaddr dc:a6:32:c5:b7:87
+
+wlan0: flags=[:up, :broadcast, :running, :multicast]
+    inet 192.168.0.120  netmask 255.255.255.0  broadcast 192.168.0.255
+    inet fe80::dea6:32ff:fec5:b788  netmask ffff:ffff:ffff:ffff::
+    hwaddr dc:a6:32:c5:b7:88
+
+wwan0: flags=[:broadcast, :multicast]
+    hwaddr c2:d2:56:c3:95:e3
+
+
+08:23:46.537 [info]  usb 1-1.1: USB disconnect, device number 4
+
+08:23:46.537 [info]  option1 ttyUSB0: GSM modem (1-port) converter now disconnected from ttyUSB0
+
+08:23:46.537 [info]  option 1-1.1:1.0: device disconnected
+
+08:23:46.560 [info]  option1 ttyUSB1: GSM modem (1-port) converter now disconnected from ttyUSB1
+
+08:23:46.560 [info]  option 1-1.1:1.1: device disconnected
+
+08:23:46.560 [info]  option1 ttyUSB2: GSM modem (1-port) converter now disconnected from ttyUSB2
+
+08:23:46.565 [info]  option 1-1.1:1.2: device disconnected
+
+08:23:46.589 [info]  option1 ttyUSB3: GSM modem (1-port) converter now disconnected from ttyUSB3
+
+08:23:46.589 [info]  option 1-1.1:1.3: device disconnected
+
+08:23:46.589 [info]  qmi_wwan 1-1.1:1.4 wwan0: unregister 'qmi_wwan' usb-0000:01:00.0-1.1, WWAN/QMI device
+
+08:23:59.482 [info]  usb 1-1.1: new high-speed USB device number 5 using xhci_hcd
+
+08:23:59.626 [info]  usb 1-1.1: New USB device found, idVendor=2c7c, idProduct=0296, bcdDevice= 0.00
+
+08:23:59.626 [info]  usb 1-1.1: New USB device strings: Mfr=3, Product=2, SerialNumber=4
+
+08:23:59.627 [info]  usb 1-1.1: Product: Qualcomm CDMA Technologies MSM
+
+08:23:59.627 [info]  usb 1-1.1: Manufacturer: Qualcomm, Incorporated
+
+08:23:59.637 [info]  usb 1-1.1: SerialNumber: 8b00d7d3
+
+08:23:59.672 [info]  option 1-1.1:1.0: GSM modem (1-port) converter detected
+
+08:23:59.672 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB0
+
+08:23:59.672 [info]  option 1-1.1:1.1: GSM modem (1-port) converter detected
+
+08:23:59.689 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB1
+
+08:23:59.689 [info]  option 1-1.1:1.2: GSM modem (1-port) converter detected
+
+08:23:59.690 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB2
+
+08:23:59.705 [info]  option 1-1.1:1.3: GSM modem (1-port) converter detected
+
+08:23:59.705 [info]  usb 1-1.1: GSM modem (1-port) converter now attached to ttyUSB3
+
+08:23:59.713 [info]  qmi_wwan 1-1.1:1.4: cdc-wdm0: USB WDM device
+
+08:23:59.725 [info]  qmi_wwan 1-1.1:1.4 wwan0: register 'qmi_wwan' at usb-0000:01:00.0-1.1, WWAN/QMI device, c2:d2:56:c3:95:e3
+iex(17)>
+nil
+iex(18)> VintageNet.get_by_prefix([])
+[
+  {["available_interfaces"], ["wlan0"]},
+  {["connection"], :internet},
+  {["interface", "eth0", "hw_path"], "/devices/platform/scb/fd580000.genet"},
+  {["interface", "eth0", "lower_up"], false},
+  {["interface", "eth0", "mac_address"], "dc:a6:32:c5:b7:87"},
+  {["interface", "eth0", "present"], true},
+  {["interface", "lo", "addresses"],
+   [
+     %{
+       address: {0, 0, 0, 0, 0, 0, 0, 1},
+       family: :inet6,
+       netmask: {65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535},
+       prefix_length: 128,
+       scope: :host
+     },
+     %{
+       address: {127, 0, 0, 1},
+       family: :inet,
+       netmask: {255, 0, 0, 0},
+       prefix_length: 8,
+       scope: :host
+     }
+   ]},
+  {["interface", "lo", "hw_path"], "/devices/virtual"},
+  {["interface", "lo", "lower_up"], true},
+  {["interface", "lo", "mac_address"], "00:00:00:00:00:00"},
+  {["interface", "lo", "present"], true},
+  {["interface", "wlan0", "addresses"],
+   [
+     %{
+       address: {192, 168, 0, 120},
+       family: :inet,
+       netmask: {255, 255, 255, 0},
+       prefix_length: 24,
+       scope: :universe
+     },
+     %{
+       address: {65152, 0, 0, 0, 56998, 13055, 65221, 46984},
+       family: :inet6,
+       netmask: {65535, 65535, 65535, 65535, 0, 0, 0, 0},
+       prefix_length: 64,
+       scope: :link
+     }
+   ]},
+  {["interface", "wlan0", "config"],
+   %{
+     ipv4: %{method: :dhcp},
+     type: VintageNetWiFi,
+     vintage_net_wifi: %{
+       networks: [
+         %{key_mgmt: :wpa_psk, psk: "...", ssid: "..."},
+         %{key_mgmt: :wpa_psk, psk: "...", ssid: "..."}
+       ]
+     }
+   }},
+  {["interface", "wlan0", "connection"], :internet},
+  {["interface", "wlan0", "hw_path"],
+   "/devices/platform/soc/fe300000.mmcnr/mmc_host/mmc1/mmc1:0001/mmc1:0001:1"},
+  {["interface", "wlan0", "lower_up"], true},
+  {["interface", "wlan0", "mac_address"], "dc:a6:32:c5:b7:88"},
+  {["interface", "wlan0", "present"], true},
+  {["interface", "wlan0", "state"], :configured},
+  {["interface", "wlan0", "type"], VintageNetWiFi},
+  {["interface", "wlan0", "wifi", "access_points"],
+   [
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:70:9f:db:cb:2c",
+       channel: 6,
+       flags: [:wpa2_psk_ccmp, :ess],
+       frequency: 2437,
+       signal_dbm: -32,
+       signal_percent: 94,
+       ssid: "..."
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:aa:b3:37:95:48",
+       channel: 1,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2412,
+       signal_dbm: -81,
+       signal_percent: 28,
+       ssid: "SWVZHW"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:aa:b3:77:95:48",
+       channel: 1,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2412,
+       signal_dbm: -82,
+       signal_percent: 26,
+       ssid: "SWVZHW-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:aa:b3:f7:95:48",
+       channel: 1,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2412,
+       signal_dbm: -81,
+       signal_percent: 28,
+       ssid: "SPPOH-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "84:18:3a:50:7a:68",
+       channel: 13,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2472,
+       signal_dbm: -49,
+       signal_percent: 80,
+       ssid: "SWVZHW-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "84:18:3a:d0:7a:68",
+       channel: 13,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2472,
+       signal_dbm: -49,
+       signal_percent: 80,
+       ssid: "SPPOH-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "f0:9f:c2:81:18:ee",
+       channel: 1,
+       flags: [:ess],
+       frequency: 2412,
+       signal_dbm: -77,
+       signal_percent: 36,
+       ssid: "Binkix-Gasten"
+     }
+   ]},
+  {["interface", "wlan0", "wifi", "clients"], []},
+  {["interface", "wlan0", "wifi", "current_ap"],
+   %VintageNetWiFi.AccessPoint{
+     band: :wifi_2_4_ghz,
+     bssid: "6c:70:9f:db:cb:2c",
+     channel: 6,
+     flags: [:wpa2_psk_ccmp, :ess],
+     frequency: 2437,
+     signal_dbm: -32,
+     signal_percent: 94,
+     ssid: "..."
+   }},
+  {["interface", "wwan0", "hw_path"],
+   "/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.1/1-1.1:1.4"},
+  {["interface", "wwan0", "lower_up"], false},
+  {["interface", "wwan0", "mac_address"], "c2:d2:56:c3:95:e3"},
+  {["interface", "wwan0", "present"], true}
+]
+iex(19)> ifconfig
+lo: flags=[:up, :loopback, :running]
+    inet 127.0.0.1  netmask 255.0.0.0
+    inet ::1  netmask ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+    hwaddr 00:00:00:00:00:00
+
+eth0: flags=[:broadcast, :multicast]
+    hwaddr dc:a6:32:c5:b7:87
+
+wlan0: flags=[:up, :broadcast, :running, :multicast]
+    inet 192.168.0.120  netmask 255.255.255.0  broadcast 192.168.0.255
+    inet fe80::dea6:32ff:fec5:b788  netmask ffff:ffff:ffff:ffff::
+    hwaddr dc:a6:32:c5:b7:88
+
+wwan0: flags=[:broadcast, :multicast]
+    hwaddr c2:d2:56:c3:95:e3
+
+iex(20)> ifconfig
+lo: flags=[:up, :loopback, :running]
+    inet 127.0.0.1  netmask 255.0.0.0
+    inet ::1  netmask ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+    hwaddr 00:00:00:00:00:00
+
+eth0: flags=[:broadcast, :multicast]
+    hwaddr dc:a6:32:c5:b7:87
+
+wlan0: flags=[:up, :broadcast, :running, :multicast]
+    inet 192.168.0.120  netmask 255.255.255.0  broadcast 192.168.0.255
+    inet fe80::dea6:32ff:fec5:b788  netmask ffff:ffff:ffff:ffff::
+    hwaddr dc:a6:32:c5:b7:88
+
+wwan0: flags=[:broadcast, :multicast]
+    hwaddr c2:d2:56:c3:95:e3
+
+iex(21)> VintageNet.get_by_prefix([])
+[
+  {["available_interfaces"], ["wlan0"]},
+  {["connection"], :internet},
+  {["interface", "eth0", "hw_path"], "/devices/platform/scb/fd580000.genet"},
+  {["interface", "eth0", "lower_up"], false},
+  {["interface", "eth0", "mac_address"], "dc:a6:32:c5:b7:87"},
+  {["interface", "eth0", "present"], true},
+  {["interface", "lo", "addresses"],
+   [
+     %{
+       address: {0, 0, 0, 0, 0, 0, 0, 1},
+       family: :inet6,
+       netmask: {65535, 65535, 65535, 65535, 65535, 65535, 65535, 65535},
+       prefix_length: 128,
+       scope: :host
+     },
+     %{
+       address: {127, 0, 0, 1},
+       family: :inet,
+       netmask: {255, 0, 0, 0},
+       prefix_length: 8,
+       scope: :host
+     }
+   ]},
+  {["interface", "lo", "hw_path"], "/devices/virtual"},
+  {["interface", "lo", "lower_up"], true},
+  {["interface", "lo", "mac_address"], "00:00:00:00:00:00"},
+  {["interface", "lo", "present"], true},
+  {["interface", "wlan0", "addresses"],
+   [
+     %{
+       address: {192, 168, 0, 120},
+       family: :inet,
+       netmask: {255, 255, 255, 0},
+       prefix_length: 24,
+       scope: :universe
+     },
+     %{
+       address: {65152, 0, 0, 0, 56998, 13055, 65221, 46984},
+       family: :inet6,
+       netmask: {65535, 65535, 65535, 65535, 0, 0, 0, 0},
+       prefix_length: 64,
+       scope: :link
+     }
+   ]},
+  {["interface", "wlan0", "config"],
+   %{
+     ipv4: %{method: :dhcp},
+     type: VintageNetWiFi,
+     vintage_net_wifi: %{
+       networks: [
+         %{key_mgmt: :wpa_psk, psk: "...", ssid: "..."},
+         %{key_mgmt: :wpa_psk, psk: "...", ssid: "..."}
+       ]
+     }
+   }},
+  {["interface", "wlan0", "connection"], :internet},
+  {["interface", "wlan0", "hw_path"],
+   "/devices/platform/soc/fe300000.mmcnr/mmc_host/mmc1/mmc1:0001/mmc1:0001:1"},
+  {["interface", "wlan0", "lower_up"], true},
+  {["interface", "wlan0", "mac_address"], "dc:a6:32:c5:b7:88"},
+  {["interface", "wlan0", "present"], true},
+  {["interface", "wlan0", "state"], :configured},
+  {["interface", "wlan0", "type"], VintageNetWiFi},
+  {["interface", "wlan0", "wifi", "access_points"],
+   [
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:70:9f:db:cb:2c",
+       channel: 6,
+       flags: [:wpa2_psk_ccmp, :ess],
+       frequency: 2437,
+       signal_dbm: -32,
+       signal_percent: 94,
+       ssid: "..."
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:aa:b3:37:95:48",
+       channel: 1,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2412,
+       signal_dbm: -81,
+       signal_percent: 28,
+       ssid: "SWVZHW"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:aa:b3:77:95:48",
+       channel: 1,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2412,
+       signal_dbm: -82,
+       signal_percent: 26,
+       ssid: "SWVZHW-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "6c:aa:b3:f7:95:48",
+       channel: 1,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2412,
+       signal_dbm: -81,
+       signal_percent: 28,
+       ssid: "SPPOH-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "84:18:3a:50:7a:68",
+       channel: 13,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2472,
+       signal_dbm: -49,
+       signal_percent: 80,
+       ssid: "SWVZHW-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "84:18:3a:d0:7a:68",
+       channel: 13,
+       flags: [:wpa2_psk_ccmp_tkip, :ess],
+       frequency: 2472,
+       signal_dbm: -49,
+       signal_percent: 80,
+       ssid: "SPPOH-Gasten"
+     },
+     %VintageNetWiFi.AccessPoint{
+       band: :wifi_2_4_ghz,
+       bssid: "f0:9f:c2:81:18:ee",
+       channel: 1,
+       flags: [:ess],
+       frequency: 2412,
+       signal_dbm: -77,
+       signal_percent: 36,
+       ssid: "Binkix-Gasten"
+     }
+   ]},
+  {["interface", "wlan0", "wifi", "clients"], []},
+  {["interface", "wlan0", "wifi", "current_ap"],
+   %VintageNetWiFi.AccessPoint{
+     band: :wifi_2_4_ghz,
+     bssid: "6c:70:9f:db:cb:2c",
+     channel: 6,
+     flags: [:wpa2_psk_ccmp, :ess],
+     frequency: 2437,
+     signal_dbm: -32,
+     signal_percent: 94,
+     ssid: "..."
+   }},
+  {["interface", "wwan0", "hw_path"],
+   "/devices/platform/scb/fd500000.pcie/pci0000:00/0000:00:00.0/0000:01:00.0/usb1/1-1/1-1.1/1-1.1:1.4"},
+  {["interface", "wwan0", "lower_up"], false},
+  {["interface", "wwan0", "mac_address"], "c2:d2:56:c3:95:e3"},
+  {["interface", "wwan0", "present"], true}
+]
+iex(22)>
+nil
+iex(23)>   VintageNet.configure("ppp0", %{
+...(23)>     type: VintageNetMobile,
+...(23)>     vintage_net_mobile: %{
+...(23)>       modem: VintageNetMobile.Modem.QuectelBG96,
+...(23)>       service_providers: {
+...(23)>         apn: "wm",
+...(23)>       }
+...(23)>       scan: [:lte_cat_m1],
+...(23)>     }
+...(23)>   })
+** (SyntaxError) iex:28: syntax error before: apn
+
+iex(23)>   VintageNet.configure("ppp0", %{
+...(23)>     type: VintageNetMobile,
+...(23)>     vintage_net_mobile: %{
+...(23)>       modem: VintageNetMobile.Modem.QuectelBG96,
+...(23)>       service_providers: {
+...(23)>         apn: "wm",
+...(23)>       },
+...(23)>       scan: [:lte_cat_m1],
+...(23)>     }
+...(23)>   })
+** (SyntaxError) iex:28: syntax error before: apn
+
+iex(23)>
+nil
+iex(24)>   VintageNet.configure("ppp0", %{
+...(24)>     type: VintageNetMobile,
+...(24)>     vintage_net_mobile: %{
+...(24)>       modem: VintageNetMobile.Modem.QuectelBG96,
+...(24)>       service_providers: %{
+...(24)>         apn: "wm",
+...(24)>       },
+...(24)>       scan: [:lte_cat_m1],
+...(24)>     }
+...(24)>   })
+{:error,
+ "Configuration has an unrecoverable error:\n\n{:case_clause, %{apn: \"wm\"}}\n\n    (vintage_net_mobile 0.9.0) lib/vintage_net_mobile/modem/utils.ex:14: VintageNetMobile.Modem.Utils.require_a_service_provider/2\n    (vintage_net_mobile 0.9.0) lib/vintage_net_mobile/modem/quectel_BG96.ex:84: VintageNetMobile.Modem.QuectelBG96.normalize/1\n    (vintage_net 0.9.2) lib/vintage_net/interface.ex:68: VintageNet.Interface.to_raw_config/2\n    (vintage_net 0.9.2) lib/vintage_net/interface.ex:108: VintageNet.Interface.configure/3\n    (stdlib 3.13.2) erl_eval.erl:680: :erl_eval.do_apply/6\n    (elixir 1.10.4) src/elixir.erl:278: :elixir.recur_eval/3\n    (elixir 1.10.4) src/elixir.erl:263: :elixir.eval_forms/3\n    (iex 1.10.4) lib/iex/evaluator.ex:258: IEx.Evaluator.handle_eval/5\n\n"}
+iex(25)>   VintageNet.configure("ppp0", %{
+...(25)>     type: VintageNetMobile,
+...(25)>     vintage_net_mobile: %{
+...(25)>       modem: VintageNetMobile.Modem.QuectelBG96,
+...(25)>       service_providers: %{
+...(25)>         %{ apn: "wm" },
+...(25)>       },
+...(25)>       scan: [:lte_cat_m1],
+...(25)>     }
+...(25)>   })
+** (SyntaxError) iex:30: syntax error before: ','
+
+
+08:30:40.892 [debug] Nov  2 08:30:40 rngd: Added 3141/4096 bits entropy
+
+
+08:30:40.892 [debug] Nov  2 08:30:40 rngd: Added 3231/4096 bits entropy
+
+
+08:30:40.892 [debug] Nov  2 08:30:40 rngd: Added 3312/4096 bits entropy
+
+
+08:30:40.892 [debug] Nov  2 08:30:40 rngd: Added 3385/4096 bits entropy
+
+
+08:30:40.893 [debug] Nov  2 08:30:40 rngd: Added 3452/4096 bits entropy
+
+
+08:30:40.893 [debug] Nov  2 08:30:40 rngd: Added 3512/4096 bits entropy
+
+
+08:30:40.893 [debug] Nov  2 08:30:40 rngd: Added 3567/4096 bits entropy
+
+
+08:30:40.893 [debug] Nov  2 08:30:40 rngd: Added 3616/4096 bits entropy
+
+
+08:30:40.893 [debug] Nov  2 08:30:40 rngd: Added 3661/4096 bits entropy
+
+
+08:30:40.894 [debug] Nov  2 08:30:40 rngd: Added 3702/4096 bits entropy
+
+
+08:30:40.894 [debug] Nov  2 08:30:40 rngd: Reading entropy from Hardware RNG Device
+
+
+08:30:40.932 [debug] Nov  2 08:30:40 rngd: Added 3616/4096 bits entropy
+
+
+08:30:40.932 [debug] Nov  2 08:30:40 rngd: Added 3597/4096 bits entropy
+
+
+08:30:40.932 [debug] Nov  2 08:30:40 rngd: Added 3644/4096 bits entropy
+
+
+08:30:40.932 [debug] Nov  2 08:30:40 rngd: Added 3686/4096 bits entropy
+
+
+08:30:40.932 [debug] Nov  2 08:30:40 rngd: Added 3725/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3759/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3791/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3819/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3845/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3869/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3890/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3909/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3926/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3942/4096 bits entropy
+
+
+08:30:40.933 [debug] Nov  2 08:30:40 rngd: Added 3957/4096 bits entropy
+
+
+08:30:40.934 [debug] Nov  2 08:30:40 rngd: Added 3970/4096 bits entropy
+
+
+08:30:40.934 [debug] Nov  2 08:30:40 rngd: Added 3981/4096 bits entropy
+
+
+08:30:40.934 [debug] Nov  2 08:30:40 rngd: Added 3992/4096 bits entropy
+
+
+08:30:40.934 [debug] Nov  2 08:30:40 rngd: Added 4002/4096 bits entropy
+
+
+08:30:40.934 [debug] Nov  2 08:30:40 rngd: Added 4010/4096 bits entropy
+
+
+08:30:40.934 [debug] Nov  2 08:30:40 rngd: Added 4018/4096 bits entropy
+
+
+08:30:40.934 [debug] Nov  2 08:30:40 rngd: Added 4025/4096 bits entropy
+
+
+08:30:40.935 [debug] Nov  2 08:30:40 rngd: Added 4032/4096 bits entropy
+
+
+08:30:40.935 [debug] Nov  2 08:30:40 rngd: Pool full at 4096, sleeping!
+
+iex(25)>   VintageNet.configure("ppp0", %{
+...(25)>     type: VintageNetMobile,
+...(25)>     vintage_net_mobile: %{
+...(25)>       modem: VintageNetMobile.Modem.QuectelBG96,
+...(25)>       service_providers: [
+...(25)>         %{ apn: "wm" }
+...(25)>       ],
+...(25)>       scan: [:lte_cat_m1],
+...(25)>     }
+...(25)>   })
+
+08:30:49.024 [debug] VintageNet(ppp0): :configured -> internal configure (VintageNetMobile)
+:ok
+
+08:30:49.122 [info]  Nov  2 08:30:49 pppd[295]: pppd 2.4.8 started by root, uid 0
+
+08:30:49.122 [info]  PPP generic driver version 2.4.2
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: abort on (BUSY)
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: abort on (NO CARRIER)
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: abort on (NO DIALTONE)
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: abort on (NO DIAL TONE)
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: abort on (NO ANSWER)
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: abort on (DELAYED)
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: timeout set to 10 seconds
+
+08:30:50.139 [info]  Nov  2 08:30:50 chat[297]: report (CONNECT)
+
+08:30:50.140 [info]  Nov  2 08:30:50 chat[297]: send (+++^M)
+
+08:30:50.179 [info]  Nov  2 08:30:50 chat[297]: send (AT^M)
+
+08:30:50.209 [info]  Nov  2 08:30:50 chat[297]: expect (OK)
+
+08:30:50.211 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.211 [info]  Nov  2 08:30:50 chat[297]: OK
+
+08:30:50.212 [info]  Nov  2 08:30:50 chat[297]:  -- got it
+
+
+08:30:50.212 [info]  Nov  2 08:30:50 chat[297]: send (ATH^M)
+
+08:30:50.251 [info]  Nov  2 08:30:50 chat[297]: expect (OK)
+
+08:30:50.251 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.256 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.256 [info]  Nov  2 08:30:50 chat[297]: OK
+
+08:30:50.256 [info]  Nov  2 08:30:50 chat[297]:  -- got it
+
+
+08:30:50.256 [info]  Nov  2 08:30:50 chat[297]: send (ATZ^M)
+
+08:30:50.296 [info]  Nov  2 08:30:50 chat[297]: expect (OK)
+
+08:30:50.296 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.300 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.300 [info]  Nov  2 08:30:50 chat[297]: OK
+
+08:30:50.300 [info]  Nov  2 08:30:50 chat[297]:  -- got it
+
+
+08:30:50.300 [info]  Nov  2 08:30:50 chat[297]: send (ATQ0^M)
+
+08:30:50.351 [info]  Nov  2 08:30:50 chat[297]: expect (OK)
+
+08:30:50.351 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.353 [info]  Nov  2 08:30:50 chat[297]: ATQ0^M^M
+
+08:30:50.354 [info]  Nov  2 08:30:50 chat[297]: OK
+
+08:30:50.354 [info]  Nov  2 08:30:50 chat[297]:  -- got it
+
+
+08:30:50.354 [info]  Nov  2 08:30:50 chat[297]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:30:50.584 [info]  Nov  2 08:30:50 chat[297]: expect (OK)
+
+08:30:50.584 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.606 [info]  Nov  2 08:30:50 chat[297]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:30:50.606 [info]  Nov  2 08:30:50 chat[297]: OK
+
+08:30:50.606 [info]  Nov  2 08:30:50 chat[297]:  -- got it
+
+
+08:30:50.606 [info]  Nov  2 08:30:50 chat[297]: send (AT+QCFG="nwscanseq",02^M)
+
+08:30:50.838 [info]  Nov  2 08:30:50 chat[297]: expect (OK)
+
+08:30:50.838 [info]  Nov  2 08:30:50 chat[297]: ^M
+
+08:30:50.848 [info]  Nov  2 08:30:50 chat[297]: AT+QCFG="nwscanseq",02^M^M
+
+08:30:50.849 [info]  Nov  2 08:30:50 chat[297]: OK
+
+08:30:50.849 [info]  Nov  2 08:30:50 chat[297]:  -- got it
+
+
+08:30:50.849 [info]  Nov  2 08:30:50 chat[297]: send (AT+QCFG="nwscanmode",3^M)
+
+08:30:51.081 [info]  Nov  2 08:30:51 chat[297]: expect (OK)
+
+08:30:51.081 [info]  Nov  2 08:30:51 chat[297]: ^M
+
+08:30:51.083 [info]  Nov  2 08:30:51 chat[297]: AT+QCFG="nwscanmode",3^M^M
+
+08:30:51.083 [info]  Nov  2 08:30:51 chat[297]: OK
+
+08:30:51.083 [info]  Nov  2 08:30:51 chat[297]:  -- got it
+
+
+08:30:51.084 [info]  Nov  2 08:30:51 chat[297]: send (AT+QCFG="iotopmode",0^M)
+
+08:30:51.304 [info]  Nov  2 08:30:51 chat[297]: expect (OK)
+
+08:30:51.304 [info]  Nov  2 08:30:51 chat[297]: ^M
+
+08:30:51.307 [info]  Nov  2 08:30:51 chat[297]: AT+QCFG="iotopmode",0^M^M
+
+08:30:51.307 [info]  Nov  2 08:30:51 chat[297]: OK
+
+08:30:51.307 [info]  Nov  2 08:30:51 chat[297]:  -- got it
+
+
+08:30:51.307 [info]  Nov  2 08:30:51 chat[297]: send (ATDT*99***1#^M)
+
+08:30:51.437 [info]  Nov  2 08:30:51 chat[297]: expect (CONNECT)
+
+08:30:51.437 [info]  Nov  2 08:30:51 chat[297]: ^M
+
+08:30:51.441 [info]  Nov  2 08:30:51 chat[297]: ATDT*99***1#^M^M
+
+08:30:51.443 [info]  Nov  2 08:30:51 chat[297]: CONNECT
+
+08:30:51.443 [info]  Nov  2 08:30:51 chat[297]:  -- got it
+
+
+08:30:51.443 [info]  Nov  2 08:30:51 chat[297]: send (^M)
+
+08:30:51.452 [debug] Nov  2 08:30:51 pppd[295]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 297), status = 0x0
+
+08:30:51.453 [info]  Nov  2 08:30:51 pppd[295]: Serial connection established.
+
+08:30:51.475 [debug] Nov  2 08:30:51 pppd[295]: using channel 1
+
+08:30:51.477 [info]  Nov  2 08:30:51 pppd[295]: Using interface ppp0
+
+08:30:51.477 [info]  Nov  2 08:30:51 pppd[295]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:30:52.477 [debug] Nov  2 08:30:52 pppd[295]: sent [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0x75d95509> <pcomp> <accomp>]
+
+08:30:52.480 [debug] Nov  2 08:30:52 pppd[295]: rcvd [LCP ConfReq id=0x0 <asyncmap 0x0> <auth chap MD5> <magic 0xc7a03021> <pcomp> <accomp>]
+
+08:30:52.480 [debug] Nov  2 08:30:52 pppd[295]: No auth is possible
+
+08:30:52.480 [debug] Nov  2 08:30:52 pppd[295]: sent [LCP ConfRej id=0x0 <auth chap MD5>]
+
+08:30:52.483 [debug] Nov  2 08:30:52 pppd[295]: rcvd [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0x75d95509> <pcomp> <accomp>]
+
+08:30:52.483 [debug] Nov  2 08:30:52 pppd[295]: rcvd [LCP ConfReq id=0x1 <asyncmap 0x0> <magic 0xc7a03021> <pcomp> <accomp>]
+
+08:30:52.483 [debug] Nov  2 08:30:52 pppd[295]: sent [LCP ConfAck id=0x1 <asyncmap 0x0> <magic 0xc7a03021> <pcomp> <accomp>]
+
+08:30:52.501 [info]  PPP BSD Compression module registered
+
+08:30:52.520 [debug] Nov  2 08:30:52 pppd[295]: sent [CCP ConfReq id=0x1 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:30:52.522 [debug] Nov  2 08:30:52 pppd[295]: sent [IPCP ConfReq id=0x1 <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:30:52.522 [debug] Nov  2 08:30:52 pppd[295]: rcvd [LCP DiscReq id=0x2 magic=0xc7a03021]
+
+08:30:52.522 [debug] Nov  2 08:30:52 pppd[295]: rcvd [LCP ProtRej id=0x3 80 fd 01 01 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:30:52.522 [debug] Nov  2 08:30:52 pppd[295]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:30:52.523 [info]  PPP Deflate Compression module registered
+
+08:30:52.534 [debug] Nov  2 08:30:52 pppd[295]: rcvd [IPCP ConfReq id=0x0]
+
+08:30:52.534 [debug] Nov  2 08:30:52 pppd[295]: sent [IPCP ConfNak id=0x0 <addr 0.0.0.0>]
+
+08:30:52.535 [debug] Nov  2 08:30:52 pppd[295]: rcvd [IPCP ConfRej id=0x1 <compress VJ 0f 01>]
+
+08:30:52.536 [debug] Nov  2 08:30:52 pppd[295]: sent [IPCP ConfReq id=0x2 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:30:52.536 [debug] Nov  2 08:30:52 pppd[295]: rcvd [IPCP ConfReq id=0x1]
+
+08:30:52.536 [debug] Nov  2 08:30:52 pppd[295]: sent [IPCP ConfAck id=0x1]
+
+08:30:52.536 [debug] Nov  2 08:30:52 pppd[295]: rcvd [IPCP ConfNak id=0x2 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:30:52.536 [debug] Nov  2 08:30:52 pppd[295]: sent [IPCP ConfReq id=0x3 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:30:52.538 [debug] Nov  2 08:30:52 pppd[295]: rcvd [IPCP ConfAck id=0x3 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:30:52.538 [warn]  Nov  2 08:30:52 pppd[295]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:30:52.539 [debug] Nov  2 08:30:52 pppd[295]: Script /etc/ppp/ip-pre-up started (pid 302)
+
+08:30:52.543 [debug] Nov  2 08:30:52 pppd[295]: Script /etc/ppp/ip-pre-up finished (pid 302), status = 0x0
+
+08:30:52.544 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "295", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:30:52.545 [info]  Nov  2 08:30:52 pppd[295]: local  IP address 100.85.118.2
+
+08:30:52.545 [info]  Nov  2 08:30:52 pppd[295]: remote IP address 10.64.64.64
+
+08:30:52.546 [info]  Nov  2 08:30:52 pppd[295]: primary   DNS address 8.8.8.8
+
+08:30:52.546 [info]  Nov  2 08:30:52 pppd[295]: secondary DNS address 8.8.4.4
+
+08:30:52.546 [debug] Nov  2 08:30:52 pppd[295]: Script /etc/ppp/ip-up started (pid 303)
+
+08:30:52.548 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "295", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:30:52.549 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:30:52.549 [debug] Nov  2 08:30:52 pppd[295]: Script /etc/ppp/ip-up finished (pid 303), status = 0x0
+iex(26)> ifconfig
+lo: flags=[:up, :loopback, :running]
+    inet 127.0.0.1  netmask 255.0.0.0
+    inet ::1  netmask ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff
+    hwaddr 00:00:00:00:00:00
+
+eth0: flags=[:broadcast, :multicast]
+    hwaddr dc:a6:32:c5:b7:87
+
+wlan0: flags=[:up, :broadcast, :running, :multicast]
+    inet 192.168.0.120  netmask 255.255.255.0  broadcast 192.168.0.255
+    inet fe80::dea6:32ff:fec5:b788  netmask ffff:ffff:ffff:ffff::
+    hwaddr dc:a6:32:c5:b7:88
+
+wwan0: flags=[:broadcast, :multicast]
+    hwaddr c2:d2:56:c3:95:e3
+
+ppp0: flags=[:up, :pointtopoint, :running, :multicast]
+    inet 100.85.118.2  netmask 255.255.255.255
+
+iex(27)> VintageNet.Info.info
+VintageNet 0.9.2
+
+All interfaces:       ["eth0", "lo", "ppp0", "wlan0", "wwan0"]
+Available interfaces: ["wlan0", "ppp0"]
+
+Interface ppp0
+  Type: VintageNetMobile
+  Present: true
+  State: :configured (24.0 s)
+  Connection: :internet (20.4 s)
+  Addresses: 100.85.118.2/32
+  Configuration:
+    %{
+      type: VintageNetMobile,
+      vintage_net_mobile: %{
+        modem: VintageNetMobile.Modem.QuectelBG96,
+        scan: [:lte_cat_m1],
+        service_providers: [%{apn: "wm"}]
+      }
+    }
+
+Interface wlan0
+  Type: VintageNetWiFi
+  Present: true
+  State: :configured (0:14:34)
+  Connection: :internet (0:13:55)
+  Addresses: 192.168.0.120/24, fe80::dea6:32ff:fec5:b788/64
+  Configuration:
+    %{
+      ipv4: %{method: :dhcp},
+      type: VintageNetWiFi,
+      vintage_net_wifi: %{
+        networks: [
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."},
+          %{key_mgmt: :wpa_psk, psk: "....", ssid: "..."}
+        ]
+      }
+    }
+
+:ok
+
+08:31:19.052 [warn]  Send "AT+QSPN" failed: {:error, "ERROR"}. Ignoring...
+
+08:31:28.141 [debug] Nov  2 08:31:28 pppd[295]: rcvd [LCP TermReq id=0x4]
+
+08:31:28.141 [info]  Nov  2 08:31:28 pppd[295]: LCP terminated by peer
+
+08:31:28.141 [info]  Nov  2 08:31:28 pppd[295]: Connect time 0.6 minutes.
+
+08:31:28.141 [info]  Nov  2 08:31:28 pppd[295]: Sent 0 bytes, received 0 bytes.
+
+08:31:28.143 [debug] Nov  2 08:31:28 pppd[295]: Script /etc/ppp/ip-down started (pid 310)
+
+08:31:28.144 [debug] Nov  2 08:31:28 pppd[295]: sent [LCP TermAck id=0x4]
+
+08:31:28.146 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "36", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "295", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:31:28.147 [info]  RouteManager: clear_route ppp0
+
+08:31:28.147 [debug] Nov  2 08:31:28 pppd[295]: Script /etc/ppp/ip-down finished (pid 310), status = 0x0
+
+08:31:28.150 [info]  Nov  2 08:31:28 pppd[295]: Modem hangup
+
+08:31:28.150 [info]  Nov  2 08:31:28 pppd[295]: Connection terminated.
+
+08:31:28.187 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:31:28.219 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:31:28.251 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:31:28.284 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:32:00.242 [info]  Nov  2 08:32:00 chat[324]: abort on (BUSY)
+
+08:32:00.242 [info]  Nov  2 08:32:00 chat[324]: abort on (NO CARRIER)
+
+08:32:00.242 [info]  Nov  2 08:32:00 chat[324]: abort on (NO DIALTONE)
+
+08:32:00.242 [info]  Nov  2 08:32:00 chat[324]: abort on (NO DIAL TONE)
+
+08:32:00.243 [info]  Nov  2 08:32:00 chat[324]: abort on (NO ANSWER)
+
+08:32:00.243 [info]  Nov  2 08:32:00 chat[324]: abort on (DELAYED)
+
+08:32:00.243 [info]  Nov  2 08:32:00 chat[324]: timeout set to 10 seconds
+
+08:32:00.243 [info]  Nov  2 08:32:00 chat[324]: report (CONNECT)
+
+08:32:00.243 [info]  Nov  2 08:32:00 chat[324]: send (+++^M)
+
+08:32:00.283 [info]  Nov  2 08:32:00 chat[324]: send (AT^M)
+
+08:32:00.313 [info]  Nov  2 08:32:00 chat[324]: expect (OK)
+
+08:32:00.315 [info]  Nov  2 08:32:00 chat[324]: AT^M^M
+
+08:32:00.315 [info]  Nov  2 08:32:00 chat[324]: OK
+
+08:32:00.315 [info]  Nov  2 08:32:00 chat[324]:  -- got it
+
+
+08:32:00.315 [info]  Nov  2 08:32:00 chat[324]: send (ATH^M)
+
+08:32:00.355 [info]  Nov  2 08:32:00 chat[324]: expect (OK)
+
+08:32:00.355 [info]  Nov  2 08:32:00 chat[324]: ^M
+
+08:32:00.357 [info]  Nov  2 08:32:00 chat[324]: ATH^M^M
+
+08:32:00.358 [info]  Nov  2 08:32:00 chat[324]: OK
+
+08:32:00.358 [info]  Nov  2 08:32:00 chat[324]:  -- got it
+
+
+08:32:00.358 [info]  Nov  2 08:32:00 chat[324]: send (ATZ^M)
+
+08:32:00.397 [info]  Nov  2 08:32:00 chat[324]: expect (OK)
+
+08:32:00.397 [info]  Nov  2 08:32:00 chat[324]: ^M
+
+08:32:00.400 [info]  Nov  2 08:32:00 chat[324]: ATZ^M^M
+
+08:32:00.400 [info]  Nov  2 08:32:00 chat[324]: OK
+
+08:32:00.400 [info]  Nov  2 08:32:00 chat[324]:  -- got it
+
+
+08:32:00.400 [info]  Nov  2 08:32:00 chat[324]: send (ATQ0^M)
+
+08:32:00.450 [info]  Nov  2 08:32:00 chat[324]: expect (OK)
+
+08:32:00.450 [info]  Nov  2 08:32:00 chat[324]: ^M
+
+08:32:00.453 [info]  Nov  2 08:32:00 chat[324]: ATQ0^M^M
+
+08:32:00.453 [info]  Nov  2 08:32:00 chat[324]: OK
+
+08:32:00.453 [info]  Nov  2 08:32:00 chat[324]:  -- got it
+
+
+08:32:00.453 [info]  Nov  2 08:32:00 chat[324]: send (AT+CGDCONT=1,"IP","wm"^M)
+
+08:32:00.684 [info]  Nov  2 08:32:00 chat[324]: expect (OK)
+
+08:32:00.684 [info]  Nov  2 08:32:00 chat[324]: ^M
+
+08:32:00.705 [info]  Nov  2 08:32:00 chat[324]: AT+CGDCONT=1,"IP","wm"^M^M
+
+08:32:00.705 [info]  Nov  2 08:32:00 chat[324]: OK
+
+08:32:00.705 [info]  Nov  2 08:32:00 chat[324]:  -- got it
+
+
+08:32:00.705 [info]  Nov  2 08:32:00 chat[324]: send (AT+QCFG="nwscanseq",02^M)
+
+08:32:00.937 [info]  Nov  2 08:32:00 chat[324]: expect (OK)
+
+08:32:00.937 [info]  Nov  2 08:32:00 chat[324]: ^M
+
+08:32:00.945 [info]  Nov  2 08:32:00 chat[324]: AT+QCFG="nwscanseq",02^M^M
+
+08:32:00.945 [info]  Nov  2 08:32:00 chat[324]: OK
+
+08:32:00.945 [info]  Nov  2 08:32:00 chat[324]:  -- got it
+
+
+08:32:00.945 [info]  Nov  2 08:32:00 chat[324]: send (AT+QCFG="nwscanmode",3^M)
+
+08:32:01.177 [info]  Nov  2 08:32:01 chat[324]: expect (OK)
+
+08:32:01.177 [info]  Nov  2 08:32:01 chat[324]: ^M
+
+08:32:01.179 [info]  Nov  2 08:32:01 chat[324]: AT+QCFG="nwscanmode",3^M^M
+
+08:32:01.179 [info]  Nov  2 08:32:01 chat[324]: OK
+
+08:32:01.180 [info]  Nov  2 08:32:01 chat[324]:  -- got it
+
+
+08:32:01.180 [info]  Nov  2 08:32:01 chat[324]: send (AT+QCFG="iotopmode",0^M)
+
+08:32:01.400 [info]  Nov  2 08:32:01 chat[324]: expect (OK)
+
+08:32:01.400 [info]  Nov  2 08:32:01 chat[324]: ^M
+
+08:32:01.402 [info]  Nov  2 08:32:01 chat[324]: AT+QCFG="iotopmode",0^M^M
+
+08:32:01.402 [info]  Nov  2 08:32:01 chat[324]: OK
+
+08:32:01.403 [info]  Nov  2 08:32:01 chat[324]:  -- got it
+
+
+08:32:01.403 [info]  Nov  2 08:32:01 chat[324]: send (ATDT*99***1#^M)
+
+08:32:01.533 [info]  Nov  2 08:32:01 chat[324]: expect (CONNECT)
+
+08:32:01.533 [info]  Nov  2 08:32:01 chat[324]: ^M
+
+08:32:01.536 [info]  Nov  2 08:32:01 chat[324]: ATDT*99***1#^M^M
+
+08:32:01.538 [info]  Nov  2 08:32:01 chat[324]: CONNECT
+
+08:32:01.538 [info]  Nov  2 08:32:01 chat[324]:  -- got it
+
+
+08:32:01.538 [info]  Nov  2 08:32:01 chat[324]: send (^M)
+
+08:32:01.547 [debug] Nov  2 08:32:01 pppd[295]: Script chat -v -f /tmp/vintage_net/chatscript.ppp0 finished (pid 324), status = 0x0
+
+08:32:01.547 [info]  Nov  2 08:32:01 pppd[295]: Serial connection established.
+
+08:32:01.551 [debug] Nov  2 08:32:01 pppd[295]: using channel 2
+
+08:32:01.551 [info]  Nov  2 08:32:01 pppd[295]: Using interface ppp0
+
+08:32:01.551 [info]  Nov  2 08:32:01 pppd[295]: Connect: ppp0 <--> /dev/ttyUSB3
+
+08:32:02.550 [debug] Nov  2 08:32:02 pppd[295]: sent [LCP ConfReq id=0x2 <asyncmap 0x0> <magic 0xea3166fd> <pcomp> <accomp>]
+
+08:32:02.553 [debug] Nov  2 08:32:02 pppd[295]: rcvd [LCP ConfReq id=0x5 <asyncmap 0x0> <auth chap MD5> <magic 0xc7a14002> <pcomp> <accomp>]
+
+08:32:02.553 [debug] Nov  2 08:32:02 pppd[295]: No auth is possible
+
+08:32:02.553 [debug] Nov  2 08:32:02 pppd[295]: sent [LCP ConfRej id=0x5 <auth chap MD5>]
+
+08:32:02.554 [debug] Nov  2 08:32:02 pppd[295]: rcvd [LCP ConfAck id=0x2 <asyncmap 0x0> <magic 0xea3166fd> <pcomp> <accomp>]
+
+08:32:02.556 [debug] Nov  2 08:32:02 pppd[295]: rcvd [LCP ConfReq id=0x6 <asyncmap 0x0> <magic 0xc7a14002> <pcomp> <accomp>]
+
+08:32:02.556 [debug] Nov  2 08:32:02 pppd[295]: sent [LCP ConfAck id=0x6 <asyncmap 0x0> <magic 0xc7a14002> <pcomp> <accomp>]
+
+08:32:02.556 [debug] Nov  2 08:32:02 pppd[295]: sent [CCP ConfReq id=0x2 <deflate 15> <deflate(old#) 15> <bsd v1 15>]
+
+08:32:02.556 [debug] Nov  2 08:32:02 pppd[295]: sent [IPCP ConfReq id=0x4 <compress VJ 0f 01> <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:32:02.557 [debug] Nov  2 08:32:02 pppd[295]: rcvd [LCP DiscReq id=0x7 magic=0xc7a14002]
+
+08:32:02.557 [debug] Nov  2 08:32:02 pppd[295]: rcvd [LCP ProtRej id=0x8 80 fd 01 02 00 0f 1a 04 78 00 18 04 78 00 15 03 2f]
+
+08:32:02.557 [debug] Nov  2 08:32:02 pppd[295]: Protocol-Reject for 'Compression Control Protocol' (0x80fd) received
+
+08:32:02.567 [debug] Nov  2 08:32:02 pppd[295]: rcvd [IPCP ConfReq id=0x2]
+
+08:32:02.567 [debug] Nov  2 08:32:02 pppd[295]: sent [IPCP ConfNak id=0x2 <addr 0.0.0.0>]
+
+08:32:02.567 [debug] Nov  2 08:32:02 pppd[295]: rcvd [IPCP ConfRej id=0x4 <compress VJ 0f 01>]
+
+08:32:02.567 [debug] Nov  2 08:32:02 pppd[295]: sent [IPCP ConfReq id=0x5 <addr 0.0.0.0> <ms-dns1 0.0.0.0> <ms-dns2 0.0.0.0>]
+
+08:32:02.568 [debug] Nov  2 08:32:02 pppd[295]: rcvd [IPCP ConfReq id=0x3]
+
+08:32:02.568 [debug] Nov  2 08:32:02 pppd[295]: sent [IPCP ConfAck id=0x3]
+
+08:32:02.568 [debug] Nov  2 08:32:02 pppd[295]: rcvd [IPCP ConfNak id=0x5 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:32:02.569 [debug] Nov  2 08:32:02 pppd[295]: sent [IPCP ConfReq id=0x6 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:32:02.569 [debug] Nov  2 08:32:02 pppd[295]: rcvd [IPCP ConfAck id=0x6 <addr 100.85.118.2> <ms-dns1 8.8.8.8> <ms-dns2 8.8.4.4>]
+
+08:32:02.569 [warn]  Nov  2 08:32:02 pppd[295]: Could not determine remote IP address: defaulting to 10.64.64.64
+
+08:32:02.571 [debug] Nov  2 08:32:02 pppd[295]: Script /etc/ppp/ip-pre-up started (pid 325)
+
+08:32:02.575 [debug] pppd.ip_pre_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "295", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:32:02.576 [debug] Nov  2 08:32:02 pppd[295]: Script /etc/ppp/ip-pre-up finished (pid 325), status = 0x0
+
+08:32:02.576 [info]  Nov  2 08:32:02 pppd[295]: local  IP address 100.85.118.2
+
+08:32:02.576 [info]  Nov  2 08:32:02 pppd[295]: remote IP address 10.64.64.64
+
+08:32:02.576 [info]  Nov  2 08:32:02 pppd[295]: primary   DNS address 8.8.8.8
+
+08:32:02.576 [info]  Nov  2 08:32:02 pppd[295]: secondary DNS address 8.8.4.4
+
+08:32:02.577 [debug] Nov  2 08:32:02 pppd[295]: Script /etc/ppp/ip-up started (pid 326)
+
+08:32:02.580 [debug] pppd.ip_up(ppp0): %{DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "295", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:32:02.581 [info]  RouteManager: set_route ppp0 -> :internet
+
+08:32:02.581 [debug] Nov  2 08:32:02 pppd[295]: Script /etc/ppp/ip-up finished (pid 326), status = 0x0
+
+08:32:19.054 [warn]  Send "AT+QSPN" failed: {:error, "ERROR"}. Ignoring...
+iex(28)> weather
+** (RuntimeError) :inets can't be started.
+This probably means that it isn't in the OTP release.
+To fix, edit your mix.exs and add :inets to the :extra_applications list.
+
+    (toolshed 0.2.14) lib/toolshed/http.ex:89: Toolshed.HTTP.check_inets/0
+    (toolshed 0.2.14) lib/toolshed/http.ex:13: Toolshed.HTTP.weather/0
+
+08:32:36.466 [debug] Nov  2 08:32:36 pppd[295]: rcvd [LCP TermReq id=0x9]
+
+08:32:36.466 [info]  Nov  2 08:32:36 pppd[295]: LCP terminated by peer
+
+08:32:36.467 [info]  Nov  2 08:32:36 pppd[295]: Connect time 0.6 minutes.
+
+08:32:36.467 [info]  Nov  2 08:32:36 pppd[295]: Sent 0 bytes, received 0 bytes.
+
+08:32:36.469 [debug] Nov  2 08:32:36 pppd[295]: Script /etc/ppp/ip-down started (pid 333)
+
+08:32:36.469 [debug] Nov  2 08:32:36 pppd[295]: sent [LCP TermAck id=0x9]
+
+08:32:36.474 [debug] pppd.ip_down(ppp0): %{BYTES_RCVD: "0", BYTES_SENT: "0", CONNECT_TIME: "34", DEVICE: "/dev/ttyUSB3", DNS1: "8.8.8.8", DNS2: "8.8.4.4", IFNAME: "ppp0", IPLOCAL: "100.85.118.2", IPREMOTE: "10.64.64.64", ORIG_UID: "0", PPPD_PID: "295", PPPLOGNAME: "root", SPEED: "9600", USEPEERDNS: "1"}
+
+08:32:36.475 [info]  RouteManager: clear_route ppp0
+
+08:32:36.475 [debug] Nov  2 08:32:36 pppd[295]: Script /etc/ppp/ip-down finished (pid 333), status = 0x0
+
+08:32:36.475 [info]  Nov  2 08:32:36 pppd[295]: Modem hangup
+
+08:32:36.475 [info]  Nov  2 08:32:36 pppd[295]: Connection terminated.
+
+08:32:36.514 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:32:36.546 [warn]  route_manager(clear_a_local_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:32:36.573 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+
+08:32:36.598 [warn]  route_manager(clear_a_route): ignoring failure "ip: can't find device 'ppp0'\n"
+iex(28)> exit
+Connection to nerves-87f4.local closed.
+?  ~
+?  ~
